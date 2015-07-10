@@ -14,5 +14,9 @@ namespace ClubNotifier {
             InitializeComponent();
         }
 
+        private void 關於ToolStripMenuItem_Click(object sender, EventArgs e) {
+            new AboutBox().ShowDialog();
+        }
+
     }
 }

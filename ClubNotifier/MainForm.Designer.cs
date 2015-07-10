@@ -114,6 +114,7 @@ namespace ClubNotifier {
             this.關於ToolStripMenuItem.Name = "關於ToolStripMenuItem";
             this.關於ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.關於ToolStripMenuItem.Text = "關於";
+            this.關於ToolStripMenuItem.Click += new System.EventHandler(this.關於ToolStripMenuItem_Click);
             // 
             // toolStrip
             // 
