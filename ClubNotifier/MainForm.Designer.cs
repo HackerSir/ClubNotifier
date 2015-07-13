@@ -30,7 +30,7 @@ namespace ClubNotifier {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.聯絡人ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.說明ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Email設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.關於ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -89,7 +89,7 @@ namespace ClubNotifier {
             // 說明ToolStripMenuItem
             // 
             this.說明ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.設定ToolStripMenuItem,
+            this.Email設定ToolStripMenuItem,
             this.toolStripSeparator1,
             this.關於ToolStripMenuItem});
             this.說明ToolStripMenuItem.Name = "說明ToolStripMenuItem";
@@ -98,11 +98,12 @@ namespace ClubNotifier {
             this.說明ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.說明ToolStripMenuItem.Text = "其他";
             // 
-            // 設定ToolStripMenuItem
+            // Email設定ToolStripMenuItem
             // 
-            this.設定ToolStripMenuItem.Name = "設定ToolStripMenuItem";
-            this.設定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.設定ToolStripMenuItem.Text = "設定";
+            this.Email設定ToolStripMenuItem.Name = "Email設定ToolStripMenuItem";
+            this.Email設定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Email設定ToolStripMenuItem.Text = "E-mail 設定";
+            this.Email設定ToolStripMenuItem.Click += new System.EventHandler(this.Email設定ToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -333,7 +334,7 @@ namespace ClubNotifier {
         private Label mailFromLabel;
         private Button attachmentsButton;
         private TextBox attachmentsTextBox;
-        private ToolStripMenuItem 設定ToolStripMenuItem;
+        private ToolStripMenuItem Email設定ToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripStatusLabel statusLabel;
     }
