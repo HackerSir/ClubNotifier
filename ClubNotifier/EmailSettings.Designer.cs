@@ -70,7 +70,7 @@
             this.userNameLabel.Location = new System.Drawing.Point(6, 24);
             this.userNameLabel.Name = "userNameLabel";
             this.userNameLabel.Size = new System.Drawing.Size(73, 17);
-            this.userNameLabel.TabIndex = 14;
+            this.userNameLabel.TabIndex = 0;
             this.userNameLabel.Text = "您的名稱：";
             // 
             // userNameTextBox
@@ -81,7 +81,7 @@
             this.userNameTextBox.Location = new System.Drawing.Point(141, 21);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(355, 27);
-            this.userNameTextBox.TabIndex = 13;
+            this.userNameTextBox.TabIndex = 1;
             // 
             // mailLabel
             // 
@@ -90,7 +90,7 @@
             this.mailLabel.Location = new System.Drawing.Point(6, 57);
             this.mailLabel.Name = "mailLabel";
             this.mailLabel.Size = new System.Drawing.Size(99, 17);
-            this.mailLabel.TabIndex = 15;
+            this.mailLabel.TabIndex = 2;
             this.mailLabel.Text = "電子郵件地址：";
             // 
             // mailTextBox
@@ -101,7 +101,7 @@
             this.mailTextBox.Location = new System.Drawing.Point(141, 54);
             this.mailTextBox.Name = "mailTextBox";
             this.mailTextBox.Size = new System.Drawing.Size(355, 27);
-            this.mailTextBox.TabIndex = 14;
+            this.mailTextBox.TabIndex = 3;
             // 
             // serverInfoGroupBox
             // 
@@ -126,7 +126,7 @@
             this.SmtpServerLabel.Location = new System.Drawing.Point(6, 24);
             this.SmtpServerLabel.Name = "SmtpServerLabel";
             this.SmtpServerLabel.Size = new System.Drawing.Size(129, 17);
-            this.SmtpServerLabel.TabIndex = 16;
+            this.SmtpServerLabel.TabIndex = 0;
             this.SmtpServerLabel.Text = "外送伺服器(SMTP)：";
             // 
             // SmtpServerTextBox
@@ -137,7 +137,7 @@
             this.SmtpServerTextBox.Location = new System.Drawing.Point(141, 21);
             this.SmtpServerTextBox.Name = "SmtpServerTextBox";
             this.SmtpServerTextBox.Size = new System.Drawing.Size(234, 27);
-            this.SmtpServerTextBox.TabIndex = 16;
+            this.SmtpServerTextBox.TabIndex = 1;
             // 
             // serverPortLabel
             // 
@@ -146,7 +146,7 @@
             this.serverPortLabel.Location = new System.Drawing.Point(381, 24);
             this.serverPortLabel.Name = "serverPortLabel";
             this.serverPortLabel.Size = new System.Drawing.Size(47, 17);
-            this.serverPortLabel.TabIndex = 18;
+            this.serverPortLabel.TabIndex = 2;
             this.serverPortLabel.Text = "Port：";
             // 
             // serverPortTextBox
@@ -157,7 +157,7 @@
             this.serverPortTextBox.Location = new System.Drawing.Point(442, 21);
             this.serverPortTextBox.Name = "serverPortTextBox";
             this.serverPortTextBox.Size = new System.Drawing.Size(54, 27);
-            this.serverPortTextBox.TabIndex = 17;
+            this.serverPortTextBox.TabIndex = 3;
             this.serverPortTextBox.Text = "25";
             this.serverPortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -168,7 +168,7 @@
             this.enableSSLCheckBox.Location = new System.Drawing.Point(141, 54);
             this.enableSSLCheckBox.Name = "enableSSLCheckBox";
             this.enableSSLCheckBox.Size = new System.Drawing.Size(74, 21);
-            this.enableSSLCheckBox.TabIndex = 19;
+            this.enableSSLCheckBox.TabIndex = 4;
             this.enableSSLCheckBox.Text = "啟用SSL";
             this.enableSSLCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -195,7 +195,7 @@
             this.loginUsernameLabel.Location = new System.Drawing.Point(6, 24);
             this.loginUsernameLabel.Name = "loginUsernameLabel";
             this.loginUsernameLabel.Size = new System.Drawing.Size(86, 17);
-            this.loginUsernameLabel.TabIndex = 15;
+            this.loginUsernameLabel.TabIndex = 0;
             this.loginUsernameLabel.Text = "使用者名稱：";
             // 
             // loginUsernameTextBox
@@ -206,7 +206,7 @@
             this.loginUsernameTextBox.Location = new System.Drawing.Point(141, 21);
             this.loginUsernameTextBox.Name = "loginUsernameTextBox";
             this.loginUsernameTextBox.Size = new System.Drawing.Size(355, 27);
-            this.loginUsernameTextBox.TabIndex = 14;
+            this.loginUsernameTextBox.TabIndex = 1;
             // 
             // loginPasseordLabel
             // 
@@ -215,7 +215,7 @@
             this.loginPasseordLabel.Location = new System.Drawing.Point(6, 57);
             this.loginPasseordLabel.Name = "loginPasseordLabel";
             this.loginPasseordLabel.Size = new System.Drawing.Size(47, 17);
-            this.loginPasseordLabel.TabIndex = 15;
+            this.loginPasseordLabel.TabIndex = 2;
             this.loginPasseordLabel.Text = "密碼：";
             // 
             // loginPasseordTextBox
@@ -226,7 +226,7 @@
             this.loginPasseordTextBox.Location = new System.Drawing.Point(141, 54);
             this.loginPasseordTextBox.Name = "loginPasseordTextBox";
             this.loginPasseordTextBox.Size = new System.Drawing.Size(355, 27);
-            this.loginPasseordTextBox.TabIndex = 14;
+            this.loginPasseordTextBox.TabIndex = 3;
             this.loginPasseordTextBox.UseSystemPasswordChar = true;
             // 
             // noSavePasswordCheckBox
@@ -236,7 +236,7 @@
             this.noSavePasswordCheckBox.Location = new System.Drawing.Point(141, 87);
             this.noSavePasswordCheckBox.Name = "noSavePasswordCheckBox";
             this.noSavePasswordCheckBox.Size = new System.Drawing.Size(131, 21);
-            this.noSavePasswordCheckBox.TabIndex = 19;
+            this.noSavePasswordCheckBox.TabIndex = 4;
             this.noSavePasswordCheckBox.Text = "寄信前再詢問密碼";
             this.noSavePasswordCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -247,7 +247,7 @@
             this.OKButton.Location = new System.Drawing.Point(358, 330);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(75, 23);
-            this.OKButton.TabIndex = 3;
+            this.OKButton.TabIndex = 4;
             this.OKButton.Text = "確定";
             this.OKButton.UseVisualStyleBackColor = true;
             // 
@@ -258,7 +258,7 @@
             this.cancelButton.Location = new System.Drawing.Point(439, 330);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 4;
+            this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "取消";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
@@ -268,7 +268,7 @@
             this.sendTestMailButton.Location = new System.Drawing.Point(12, 330);
             this.sendTestMailButton.Name = "sendTestMailButton";
             this.sendTestMailButton.Size = new System.Drawing.Size(75, 23);
-            this.sendTestMailButton.TabIndex = 5;
+            this.sendTestMailButton.TabIndex = 3;
             this.sendTestMailButton.Text = "寄測試信";
             this.sendTestMailButton.UseVisualStyleBackColor = true;
             // 
