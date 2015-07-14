@@ -13,5 +13,14 @@ namespace ClubNotifier {
         public EmailSettings() {
             InitializeComponent();
         }
+
+        private void EmailSettings_Load(object sender, EventArgs e) {
+            ClubNotifier.Properties.Settings.Default.Reload();
+        }
+
+        private void OKButton_Click(object sender, EventArgs e) {
+            ClubNotifier.Properties.Settings.Default.Save();
+        }
+
     }
 }

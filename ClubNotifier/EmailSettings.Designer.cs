@@ -77,11 +77,13 @@
             // 
             this.userNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.userNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ClubNotifier.Properties.Settings.Default, "UserName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.userNameTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.userNameTextBox.Location = new System.Drawing.Point(141, 21);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(355, 27);
             this.userNameTextBox.TabIndex = 1;
+            this.userNameTextBox.Text = global::ClubNotifier.Properties.Settings.Default.UserName;
             // 
             // mailLabel
             // 
@@ -250,6 +252,7 @@
             this.OKButton.TabIndex = 4;
             this.OKButton.Text = "確定";
             this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // cancelButton
             // 
@@ -290,6 +293,7 @@
             this.MinimizeBox = false;
             this.Name = "EmailSettings";
             this.Text = "E-mail 設定";
+            this.Load += new System.EventHandler(this.EmailSettings_Load);
             this.userInfoGroupBox.ResumeLayout(false);
             this.userInfoGroupBox.PerformLayout();
             this.serverInfoGroupBox.ResumeLayout(false);
