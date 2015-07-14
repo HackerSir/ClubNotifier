@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClubNotifier.Helper;
+using ClubNotifier.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,17 +12,21 @@ using System.Windows.Forms;
 
 namespace ClubNotifier {
     public partial class EmailSettings : Form {
+            
         public EmailSettings() {
             InitializeComponent();
         }
 
         private void EmailSettings_Load(object sender, EventArgs e) {
-            ClubNotifier.Properties.Settings.Default.Reload();
+            Settings.Default.Reload();
+            loginPassewordTextBox.Text = ProtectedDataHelper.ToInsecureString(ProtectedDataHelper.ReadPassword());
             updateLoginPasswordTextBoxState();
         }
 
         private void OKButton_Click(object sender, EventArgs e) {
-            ClubNotifier.Properties.Settings.Default.Save();
+            ProtectedDataHelper.SavePassword(loginPassewordTextBox.Text);
+
+            Settings.Default.Save();
         }
 
         private void noSavePasswordCheckBox_CheckedChanged(object sender, EventArgs e) {
@@ -32,6 +38,10 @@ namespace ClubNotifier {
             if (!loginPassewordTextBox.Enabled) {
                 loginPassewordTextBox.Text = "";
             }
+        }
+
+        private void EmailSettings_FormClosed(object sender, FormClosedEventArgs e) {
+            loginPassewordTextBox.Text = "";
         }
 
     }
