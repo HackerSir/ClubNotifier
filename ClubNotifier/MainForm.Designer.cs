@@ -101,19 +101,19 @@ namespace ClubNotifier {
             // Email設定ToolStripMenuItem
             // 
             this.Email設定ToolStripMenuItem.Name = "Email設定ToolStripMenuItem";
-            this.Email設定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.Email設定ToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.Email設定ToolStripMenuItem.Text = "E-mail 設定";
             this.Email設定ToolStripMenuItem.Click += new System.EventHandler(this.Email設定ToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(134, 6);
             // 
             // 關於ToolStripMenuItem
             // 
             this.關於ToolStripMenuItem.Name = "關於ToolStripMenuItem";
-            this.關於ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.關於ToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.關於ToolStripMenuItem.Text = "關於";
             this.關於ToolStripMenuItem.Click += new System.EventHandler(this.關於ToolStripMenuItem_Click);
             // 
