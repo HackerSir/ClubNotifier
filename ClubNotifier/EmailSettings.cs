@@ -28,9 +28,9 @@ namespace ClubNotifier {
         }
 
         private void updateLoginPasswordTextBoxState() {
-            loginPasseordTextBox.Enabled = !noSavePasswordCheckBox.Checked;
-            if (!loginPasseordTextBox.Enabled) {
-                loginPasseordTextBox.Text = "";
+            loginPassewordTextBox.Enabled = !noSavePasswordCheckBox.Checked;
+            if (!loginPassewordTextBox.Enabled) {
+                loginPassewordTextBox.Text = "";
             }
         }
 

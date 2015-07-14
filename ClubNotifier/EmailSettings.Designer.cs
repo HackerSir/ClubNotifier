@@ -31,8 +31,8 @@
             this.serverPortLabel = new System.Windows.Forms.Label();
             this.loginInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.loginUsernameLabel = new System.Windows.Forms.Label();
-            this.loginPasseordLabel = new System.Windows.Forms.Label();
-            this.loginPasseordTextBox = new System.Windows.Forms.TextBox();
+            this.loginPassewordLabel = new System.Windows.Forms.Label();
+            this.loginPassewordTextBox = new System.Windows.Forms.TextBox();
             this.OKButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.sendTestMailButton = new System.Windows.Forms.Button();
@@ -125,8 +125,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginInfoGroupBox.Controls.Add(this.loginUsernameLabel);
             this.loginInfoGroupBox.Controls.Add(this.loginUsernameTextBox);
-            this.loginInfoGroupBox.Controls.Add(this.loginPasseordLabel);
-            this.loginInfoGroupBox.Controls.Add(this.loginPasseordTextBox);
+            this.loginInfoGroupBox.Controls.Add(this.loginPassewordLabel);
+            this.loginInfoGroupBox.Controls.Add(this.loginPassewordTextBox);
             this.loginInfoGroupBox.Controls.Add(this.noSavePasswordCheckBox);
             this.loginInfoGroupBox.Location = new System.Drawing.Point(12, 204);
             this.loginInfoGroupBox.Name = "loginInfoGroupBox";
@@ -145,26 +145,26 @@
             this.loginUsernameLabel.TabIndex = 0;
             this.loginUsernameLabel.Text = "使用者名稱：";
             // 
-            // loginPasseordLabel
+            // loginPassewordLabel
             // 
-            this.loginPasseordLabel.AutoSize = true;
-            this.loginPasseordLabel.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.loginPasseordLabel.Location = new System.Drawing.Point(6, 57);
-            this.loginPasseordLabel.Name = "loginPasseordLabel";
-            this.loginPasseordLabel.Size = new System.Drawing.Size(47, 17);
-            this.loginPasseordLabel.TabIndex = 2;
-            this.loginPasseordLabel.Text = "密碼：";
+            this.loginPassewordLabel.AutoSize = true;
+            this.loginPassewordLabel.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.loginPassewordLabel.Location = new System.Drawing.Point(6, 57);
+            this.loginPassewordLabel.Name = "loginPassewordLabel";
+            this.loginPassewordLabel.Size = new System.Drawing.Size(47, 17);
+            this.loginPassewordLabel.TabIndex = 2;
+            this.loginPassewordLabel.Text = "密碼：";
             // 
-            // loginPasseordTextBox
+            // loginPassewordTextBox
             // 
-            this.loginPasseordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.loginPassewordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginPasseordTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.loginPasseordTextBox.Location = new System.Drawing.Point(141, 54);
-            this.loginPasseordTextBox.Name = "loginPasseordTextBox";
-            this.loginPasseordTextBox.Size = new System.Drawing.Size(355, 27);
-            this.loginPasseordTextBox.TabIndex = 3;
-            this.loginPasseordTextBox.UseSystemPasswordChar = true;
+            this.loginPassewordTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.loginPassewordTextBox.Location = new System.Drawing.Point(141, 54);
+            this.loginPassewordTextBox.Name = "loginPassewordTextBox";
+            this.loginPassewordTextBox.Size = new System.Drawing.Size(355, 27);
+            this.loginPassewordTextBox.TabIndex = 3;
+            this.loginPassewordTextBox.UseSystemPasswordChar = true;
             // 
             // OKButton
             // 
@@ -329,9 +329,9 @@
         private System.Windows.Forms.TextBox SmtpServerTextBox;
         private System.Windows.Forms.Label SmtpServerLabel;
         private System.Windows.Forms.GroupBox loginInfoGroupBox;
-        private System.Windows.Forms.Label loginPasseordLabel;
+        private System.Windows.Forms.Label loginPassewordLabel;
         private System.Windows.Forms.Label loginUsernameLabel;
-        private System.Windows.Forms.TextBox loginPasseordTextBox;
+        private System.Windows.Forms.TextBox loginPassewordTextBox;
         private System.Windows.Forms.TextBox loginUsernameTextBox;
         private System.Windows.Forms.Button OKButton;
         private System.Windows.Forms.Button cancelButton;
