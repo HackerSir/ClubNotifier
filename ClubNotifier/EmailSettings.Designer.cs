@@ -39,10 +39,10 @@
             this.loginUsernameTextBox = new System.Windows.Forms.TextBox();
             this.loginPasseordLabel = new System.Windows.Forms.Label();
             this.loginPasseordTextBox = new System.Windows.Forms.TextBox();
+            this.noSavePasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.OKButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.sendTestMailButton = new System.Windows.Forms.Button();
-            this.noSavePasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.userInfoGroupBox.SuspendLayout();
             this.serverInfoGroupBox.SuspendLayout();
             this.loginInfoGroupBox.SuspendLayout();
@@ -229,6 +229,17 @@
             this.loginPasseordTextBox.TabIndex = 14;
             this.loginPasseordTextBox.UseSystemPasswordChar = true;
             // 
+            // noSavePasswordCheckBox
+            // 
+            this.noSavePasswordCheckBox.AutoSize = true;
+            this.noSavePasswordCheckBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.noSavePasswordCheckBox.Location = new System.Drawing.Point(141, 87);
+            this.noSavePasswordCheckBox.Name = "noSavePasswordCheckBox";
+            this.noSavePasswordCheckBox.Size = new System.Drawing.Size(131, 21);
+            this.noSavePasswordCheckBox.TabIndex = 19;
+            this.noSavePasswordCheckBox.Text = "寄信前再詢問密碼";
+            this.noSavePasswordCheckBox.UseVisualStyleBackColor = true;
+            // 
             // OKButton
             // 
             this.OKButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -260,17 +271,6 @@
             this.sendTestMailButton.TabIndex = 5;
             this.sendTestMailButton.Text = "寄測試信";
             this.sendTestMailButton.UseVisualStyleBackColor = true;
-            // 
-            // noSavePasswordCheckBox
-            // 
-            this.noSavePasswordCheckBox.AutoSize = true;
-            this.noSavePasswordCheckBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.noSavePasswordCheckBox.Location = new System.Drawing.Point(141, 87);
-            this.noSavePasswordCheckBox.Name = "noSavePasswordCheckBox";
-            this.noSavePasswordCheckBox.Size = new System.Drawing.Size(131, 21);
-            this.noSavePasswordCheckBox.TabIndex = 19;
-            this.noSavePasswordCheckBox.Text = "寄信前在詢問密碼";
-            this.noSavePasswordCheckBox.UseVisualStyleBackColor = true;
             // 
             // EmailSettings
             // 
