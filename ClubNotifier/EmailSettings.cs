@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +20,11 @@ namespace ClubNotifier {
 
         private void EmailSettings_Load(object sender, EventArgs e) {
             Settings.Default.Reload();
-            loginPassewordTextBox.Text = ProtectedDataHelper.ToInsecureString(ProtectedDataHelper.ReadPassword());
+
+            using (SecureString password = ProtectedDataHelper.ReadPassword()) {
+                loginPassewordTextBox.Text = ProtectedDataHelper.ToInsecureString(password);
+            }
+
             updateLoginPasswordTextBoxState();
         }
 
