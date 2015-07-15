@@ -286,6 +286,7 @@
             this.sendTestMailButton.TabIndex = 3;
             this.sendTestMailButton.Text = "寄測試信";
             this.sendTestMailButton.UseVisualStyleBackColor = true;
+            this.sendTestMailButton.Click += new System.EventHandler(this.sendTestMailButton_Click);
             // 
             // EmailSettings
             // 

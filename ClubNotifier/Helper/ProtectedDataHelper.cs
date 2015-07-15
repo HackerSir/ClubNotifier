@@ -51,6 +51,18 @@ namespace ClubNotifier.Helper {
             return result;
         }
 
+        public static SecureString ToSecureString(String input) {
+            SecureString result = new SecureString();
+
+            foreach (char c in input) {
+                result.AppendChar(c);
+            }
+
+            result.MakeReadOnly();
+
+            return result;
+        }
+
         //http://weblogs.asp.net/jongalloway//encrypting-passwords-in-a-net-app-config-file
         public static string ToInsecureString(SecureString input) {
             string returnValue = string.Empty;
