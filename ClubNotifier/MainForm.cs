@@ -14,11 +14,11 @@ namespace ClubNotifier {
             InitializeComponent();
         }
 
-        private void Email設定ToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void SettingsToolStripButton_Click(object sender, EventArgs e) {
             new EmailSettings().ShowDialog();
         }
 
-        private void 關於ToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void AboutToolStripButton_Click(object sender, EventArgs e) {
             new AboutBox().ShowDialog();
         }
 
