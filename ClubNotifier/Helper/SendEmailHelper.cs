@@ -20,12 +20,23 @@ namespace ClubNotifier.Helper {
             client.Credentials = credentials;
 
             try {
-                client.Send(mail);
-                MessageBox.Show("測試信成功寄出。");
+                using (var dialog = new WaitDialog(client, mail)) {
+                    DialogResult result = dialog.ShowDialog();
+                    if (result == DialogResult.OK) {
+                        MessageBox.Show("測試信成功寄出。");
+                    }
+                    else if (result == DialogResult.Abort) {
+                        throw dialog.Exception;
+                    }
+                }
             }
             catch (Exception e) {
                 //TODO: 更多說明，幫助使用者排除狀況
                 MessageBox.Show(e.Message);
+            }
+            finally {
+                client.Dispose();
+                mail.Dispose();
             }
         }
 

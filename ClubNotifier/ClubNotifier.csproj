@@ -59,6 +59,12 @@
     </Compile>
     <Compile Include="Helper\ProtectedDataHelper.cs" />
     <Compile Include="Helper\SendEmailHelper.cs" />
+    <Compile Include="Helper\WaitDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\WaitDialog.Designer.cs">
+      <DependentUpon>WaitDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmailSettings.resx">
       <DependentUpon>EmailSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\WaitDialog.resx">
+      <DependentUpon>WaitDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
