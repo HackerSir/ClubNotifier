@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ClubNotifier.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity; 
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,8 +12,32 @@ using System.Windows.Forms;
 
 namespace ClubNotifier.Contacts {
     public partial class ContactForm : Form {
+
+        ClubNotifierContext context;
+
         public ContactForm() {
             InitializeComponent();
         }
+
+        private void ContactForm_Load(object sender, EventArgs e) {
+            context = new ClubNotifierContext();
+
+            context.Clubs.Load(); 
+
+            this.clubBindingSource.DataSource = context.Clubs.Local.ToBindingList(); 
+        }
+
+        private void 儲存SToolStripButton_Click(object sender, EventArgs e) {
+            this.Validate();
+
+            this.context.SaveChanges();
+
+            this.clubDataGridView.Refresh();
+        }
+
+        private void ContactForm_FormClosing(object sender, FormClosingEventArgs e) {
+            this.context.Dispose(); 
+        }
+
     }
 }

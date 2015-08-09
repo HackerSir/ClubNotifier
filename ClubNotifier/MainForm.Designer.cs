@@ -27,6 +27,7 @@ namespace ClubNotifier {
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.sendEmailToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ContactToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -45,7 +46,6 @@ namespace ClubNotifier {
             this.mailFromLabel = new System.Windows.Forms.Label();
             this.attachmentsButton = new System.Windows.Forms.Button();
             this.attachmentsTextBox = new System.Windows.Forms.TextBox();
-            this.sendEmailToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.statusStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +81,18 @@ namespace ClubNotifier {
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
             // 
+            // sendEmailToolStripButton
+            // 
+            this.sendEmailToolStripButton.AutoToolTip = false;
+            this.sendEmailToolStripButton.Image = global::ClubNotifier.Properties.Resources.SendEmailIcon;
+            this.sendEmailToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sendEmailToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.sendEmailToolStripButton.Name = "sendEmailToolStripButton";
+            this.sendEmailToolStripButton.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.sendEmailToolStripButton.Size = new System.Drawing.Size(52, 51);
+            this.sendEmailToolStripButton.Text = "發送";
+            this.sendEmailToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -95,6 +107,7 @@ namespace ClubNotifier {
             this.ContactToolStripButton.Size = new System.Drawing.Size(47, 51);
             this.ContactToolStripButton.Text = "聯絡人";
             this.ContactToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ContactToolStripButton.Click += new System.EventHandler(this.ContactToolStripButton_Click);
             // 
             // toolStripSeparator2
             // 
@@ -263,18 +276,6 @@ namespace ClubNotifier {
             this.attachmentsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.attachmentsTextBox.Size = new System.Drawing.Size(416, 27);
             this.attachmentsTextBox.TabIndex = 10;
-            // 
-            // sendEmailToolStripButton
-            // 
-            this.sendEmailToolStripButton.AutoToolTip = false;
-            this.sendEmailToolStripButton.Image = global::ClubNotifier.Properties.Resources.SendEmailIcon;
-            this.sendEmailToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.sendEmailToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.sendEmailToolStripButton.Name = "sendEmailToolStripButton";
-            this.sendEmailToolStripButton.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.sendEmailToolStripButton.Size = new System.Drawing.Size(52, 51);
-            this.sendEmailToolStripButton.Text = "發送";
-            this.sendEmailToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // MainForm
             // 

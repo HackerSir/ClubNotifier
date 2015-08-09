@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubNotifier.Contacts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,10 @@ namespace ClubNotifier {
 
         private void AboutToolStripButton_Click(object sender, EventArgs e) {
             new AboutBox().ShowDialog();
+        }
+
+        private void ContactToolStripButton_Click(object sender, EventArgs e) {
+            new ContactForm().ShowDialog();
         }
 
     }
