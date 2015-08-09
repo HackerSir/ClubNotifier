@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace ClubNotifier.Database {
     class ClubNotifierContext : DbContext 
     {
-        public DbSet<Club> Clubs { get; set; } 
+        public DbSet<Club> Clubs { get; set; }
+        public DbSet<ClubGroup> ClubGroup { get; set; } 
     }
 }
