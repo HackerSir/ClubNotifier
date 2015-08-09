@@ -90,6 +90,14 @@
     <Compile Include="Migrations\201508071007063_InitialCreate.Designer.cs">
       <DependentUpon>201508071007063_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508090637147_ChangeClubKey.cs" />
+    <Compile Include="Migrations\201508090637147_ChangeClubKey.Designer.cs">
+      <DependentUpon>201508090637147_ChangeClubKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508090643590_AddClubRequired.cs" />
+    <Compile Include="Migrations\201508090643590_AddClubRequired.Designer.cs">
+      <DependentUpon>201508090643590_AddClubRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,6 +118,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201508071007063_InitialCreate.resx">
       <DependentUpon>201508071007063_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508090637147_ChangeClubKey.resx">
+      <DependentUpon>201508090637147_ChangeClubKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508090643590_AddClubRequired.resx">
+      <DependentUpon>201508090643590_AddClubRequired.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
