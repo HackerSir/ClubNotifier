@@ -7,13 +7,13 @@ namespace ClubNotifier.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddPersonTable : IMigrationMetadata
+    public sealed partial class AddPeopleTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddPersonTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddPeopleTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201508110332296_AddPersonTable"; }
+            get { return "201508111501144_AddPeopleTable"; }
         }
         
         string IMigrationMetadata.Source

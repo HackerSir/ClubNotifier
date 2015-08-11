@@ -14,6 +14,8 @@ namespace ClubNotifier.Database {
         [Required]
         public string Name { get; set; }
 
-        public virtual ICollection<Email> emails { get; set; }
+        public virtual Club Club { get; set; }
+
+        public virtual String EmailAddress { get; set; }
     }
 }
