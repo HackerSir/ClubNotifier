@@ -66,6 +66,8 @@
     </Compile>
     <Compile Include="Database\ClubGroup.cs" />
     <Compile Include="Database\ClubNotifierContext.cs" />
+    <Compile Include="Database\Email.cs" />
+    <Compile Include="Database\Person.cs" />
     <Compile Include="EmailSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +111,10 @@
     <Compile Include="Migrations\201508090645404_AddClubGroup.Designer.cs">
       <DependentUpon>201508090645404_AddClubGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508110332296_AddPersonTable.cs" />
+    <Compile Include="Migrations\201508110332296_AddPersonTable.Designer.cs">
+      <DependentUpon>201508110332296_AddPersonTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201508090645404_AddClubGroup.resx">
       <DependentUpon>201508090645404_AddClubGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508110332296_AddPersonTable.resx">
+      <DependentUpon>201508110332296_AddPersonTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
