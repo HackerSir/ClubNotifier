@@ -25,8 +25,6 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactForm));
-            this.clubBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clubGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -44,9 +42,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.儲存SToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.clubDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
@@ -61,9 +56,12 @@
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.clubGroupDataGridView = new System.Windows.Forms.DataGridView();
+            this.clubBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clubGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clubGroupBindingSource)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -73,15 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clubGroupDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubGroupBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // clubBindingSource
-            // 
-            this.clubBindingSource.DataSource = typeof(ClubNotifier.Database.Club);
-            // 
-            // clubGroupBindingSource
-            // 
-            this.clubGroupBindingSource.DataSource = typeof(ClubNotifier.Database.ClubGroup);
             // 
             // tabControl2
             // 
@@ -239,6 +231,9 @@
             // 
             // clubDataGridView
             // 
+            this.clubDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.clubDataGridView.AutoGenerateColumns = false;
             this.clubDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clubDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -249,26 +244,8 @@
             this.clubDataGridView.Location = new System.Drawing.Point(6, 31);
             this.clubDataGridView.Name = "clubDataGridView";
             this.clubDataGridView.RowTemplate.Height = 24;
-            this.clubDataGridView.Size = new System.Drawing.Size(660, 343);
+            this.clubDataGridView.Size = new System.Drawing.Size(662, 341);
             this.clubDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClubCode";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ClubCode";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Group";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Group";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // tabPage4
             // 
@@ -399,6 +376,9 @@
             // 
             // clubGroupDataGridView
             // 
+            this.clubGroupDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.clubGroupDataGridView.AutoGenerateColumns = false;
             this.clubGroupDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clubGroupDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -409,6 +389,32 @@
             this.clubGroupDataGridView.RowTemplate.Height = 24;
             this.clubGroupDataGridView.Size = new System.Drawing.Size(662, 341);
             this.clubGroupDataGridView.TabIndex = 0;
+            // 
+            // clubBindingSource
+            // 
+            this.clubBindingSource.DataSource = typeof(ClubNotifier.Database.Club);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ClubCode";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ClubCode";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Group";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Group";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // clubGroupBindingSource
+            // 
+            this.clubGroupBindingSource.DataSource = typeof(ClubNotifier.Database.ClubGroup);
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -426,8 +432,6 @@
             this.Text = "聯絡人";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContactForm_FormClosing);
             this.Load += new System.EventHandler(this.ContactForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clubGroupBindingSource)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -441,6 +445,8 @@
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clubGroupDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubGroupBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
