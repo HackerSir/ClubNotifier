@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,17 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClubNotifier.Database {
-    class Person {
+    class Job {
 
-        public int PersonId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
-
-        public virtual Job Job { get; set; }
-
-        public virtual Club Club { get; set; }
-
-        public virtual String EmailAddress { get; set; }
     }
 }

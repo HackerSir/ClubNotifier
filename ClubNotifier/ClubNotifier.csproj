@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="Database\ClubGroup.cs" />
     <Compile Include="Database\ClubNotifierContext.cs" />
+    <Compile Include="Database\Job.cs" />
     <Compile Include="Database\Person.cs" />
     <Compile Include="EmailSettings.cs">
       <SubType>Form</SubType>
@@ -114,6 +115,10 @@
     <Compile Include="Migrations\201508111501144_AddPeopleTable.Designer.cs">
       <DependentUpon>201508111501144_AddPeopleTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508120349566_AddJobTable.cs" />
+    <Compile Include="Migrations\201508120349566_AddJobTable.Designer.cs">
+      <DependentUpon>201508120349566_AddJobTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201508111501144_AddPeopleTable.resx">
       <DependentUpon>201508111501144_AddPeopleTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508120349566_AddJobTable.resx">
+      <DependentUpon>201508120349566_AddJobTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
