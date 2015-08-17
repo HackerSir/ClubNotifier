@@ -29,7 +29,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.clubBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -46,7 +45,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
-            this.clubGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
@@ -59,47 +57,72 @@
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.clubGroupDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.jobDataGridView = new System.Windows.Forms.DataGridView();
             this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem2 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem2 = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem2 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem2 = new System.Windows.Forms.ToolStripButton();
-            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jobDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clubBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clubGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personDataGridView = new System.Windows.Forms.DataGridView();
+            this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem3 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem3 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem3 = new System.Windows.Forms.ToolStripButton();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clubDataGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clubGroupBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clubGroupDataGridView)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jobDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
             this.bindingNavigator3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubGroupBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jobDataGridView)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).BeginInit();
+            this.bindingNavigator4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl2
             // 
+            this.tabControl2.Controls.Add(this.tabPage2);
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage1);
@@ -162,10 +185,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "加入新的";
-            // 
-            // clubBindingSource
-            // 
-            this.clubBindingSource.DataSource = typeof(ClubNotifier.Database.Club);
             // 
             // bindingNavigatorCountItem
             // 
@@ -326,10 +345,6 @@
             this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem1.Text = "加入新的";
             // 
-            // clubGroupBindingSource
-            // 
-            this.clubGroupBindingSource.DataSource = typeof(ClubNotifier.Database.ClubGroup);
-            // 
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
@@ -414,7 +429,6 @@
             this.clubGroupDataGridView.AutoGenerateColumns = false;
             this.clubGroupDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clubGroupDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
             this.dataGridViewTextBoxColumn5});
             this.clubGroupDataGridView.DataSource = this.clubGroupBindingSource;
             this.clubGroupDataGridView.Location = new System.Drawing.Point(6, 31);
@@ -435,6 +449,22 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "職位";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // jobDataGridView
+            // 
+            this.jobDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.jobDataGridView.AutoGenerateColumns = false;
+            this.jobDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.jobDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6});
+            this.jobDataGridView.DataSource = this.jobBindingSource;
+            this.jobDataGridView.Location = new System.Drawing.Point(6, 31);
+            this.jobDataGridView.Name = "jobDataGridView";
+            this.jobDataGridView.RowTemplate.Height = 24;
+            this.jobDataGridView.Size = new System.Drawing.Size(662, 341);
+            this.jobDataGridView.TabIndex = 1;
             // 
             // bindingNavigator3
             // 
@@ -465,11 +495,36 @@
             this.bindingNavigator3.TabIndex = 0;
             this.bindingNavigator3.Text = "bindingNavigator3";
             // 
+            // bindingNavigatorAddNewItem2
+            // 
+            this.bindingNavigatorAddNewItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem2.Image")));
+            this.bindingNavigatorAddNewItem2.Name = "bindingNavigatorAddNewItem2";
+            this.bindingNavigatorAddNewItem2.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem2.Text = "加入新的";
+            // 
+            // bindingNavigatorCountItem2
+            // 
+            this.bindingNavigatorCountItem2.Name = "bindingNavigatorCountItem2";
+            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(27, 22);
+            this.bindingNavigatorCountItem2.Text = "/{0}";
+            this.bindingNavigatorCountItem2.ToolTipText = "項目總數";
+            // 
+            // bindingNavigatorDeleteItem2
+            // 
+            this.bindingNavigatorDeleteItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem2.Image")));
+            this.bindingNavigatorDeleteItem2.Name = "bindingNavigatorDeleteItem2";
+            this.bindingNavigatorDeleteItem2.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem2.Text = "刪除";
+            // 
             // bindingNavigatorMoveFirstItem2
             // 
             this.bindingNavigatorMoveFirstItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem2.Image")));
-            this.bindingNavigatorMoveFirstItem2.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem2.Name = "bindingNavigatorMoveFirstItem2";
             this.bindingNavigatorMoveFirstItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem2.Text = "移到最前面";
@@ -478,42 +533,35 @@
             // 
             this.bindingNavigatorMovePreviousItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMovePreviousItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem2.Image")));
-            this.bindingNavigatorMovePreviousItem2.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem2.Name = "bindingNavigatorMovePreviousItem2";
             this.bindingNavigatorMovePreviousItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem2.Text = "移到上一個";
             // 
             // bindingNavigatorSeparator6
             // 
-            this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator6";
             this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem2
             // 
             this.bindingNavigatorPositionItem2.AccessibleName = "位置";
             this.bindingNavigatorPositionItem2.AutoSize = false;
-            this.bindingNavigatorPositionItem2.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem2.Name = "bindingNavigatorPositionItem2";
             this.bindingNavigatorPositionItem2.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem2.Text = "0";
             this.bindingNavigatorPositionItem2.ToolTipText = "目前的位置";
             // 
-            // bindingNavigatorCountItem2
-            // 
-            this.bindingNavigatorCountItem2.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(27, 22);
-            this.bindingNavigatorCountItem2.Text = "/{0}";
-            this.bindingNavigatorCountItem2.ToolTipText = "項目總數";
-            // 
             // bindingNavigatorSeparator7
             // 
-            this.bindingNavigatorSeparator7.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator7.Name = "bindingNavigatorSeparator7";
             this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem2
             // 
             this.bindingNavigatorMoveNextItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveNextItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem2.Image")));
-            this.bindingNavigatorMoveNextItem2.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem2.Name = "bindingNavigatorMoveNextItem2";
             this.bindingNavigatorMoveNextItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem2.Text = "移到下一個";
@@ -522,80 +570,19 @@
             // 
             this.bindingNavigatorMoveLastItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveLastItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem2.Image")));
-            this.bindingNavigatorMoveLastItem2.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem2.Name = "bindingNavigatorMoveLastItem2";
             this.bindingNavigatorMoveLastItem2.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem2.Text = "移到最後面";
             // 
             // bindingNavigatorSeparator8
             // 
-            this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator8";
             this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorAddNewItem2
+            // clubBindingSource
             // 
-            this.bindingNavigatorAddNewItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem2.Image")));
-            this.bindingNavigatorAddNewItem2.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem2.Text = "加入新的";
-            // 
-            // bindingNavigatorDeleteItem2
-            // 
-            this.bindingNavigatorDeleteItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem2.Image")));
-            this.bindingNavigatorDeleteItem2.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem2.Text = "刪除";
-            // 
-            // jobBindingSource
-            // 
-            this.jobBindingSource.DataSource = typeof(ClubNotifier.Database.Job);
-            // 
-            // jobDataGridView
-            // 
-            this.jobDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.jobDataGridView.AutoGenerateColumns = false;
-            this.jobDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.jobDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn6});
-            this.jobDataGridView.DataSource = this.jobBindingSource;
-            this.jobDataGridView.Location = new System.Drawing.Point(6, 31);
-            this.jobDataGridView.Name = "jobDataGridView";
-            this.jobDataGridView.RowTemplate.Height = 24;
-            this.jobDataGridView.Size = new System.Drawing.Size(662, 341);
-            this.jobDataGridView.TabIndex = 1;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn5.HeaderText = "分類名稱";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn6.HeaderText = "職位名稱";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.clubBindingSource.DataSource = typeof(ClubNotifier.Database.Club);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -612,8 +599,217 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Group";
+            this.dataGridViewTextBoxColumn3.DataSource = this.clubGroupBindingSource;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "Name";
             this.dataGridViewTextBoxColumn3.HeaderText = "社團分類";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "Id";
+            // 
+            // clubGroupBindingSource
+            // 
+            this.clubGroupBindingSource.DataSource = typeof(ClubNotifier.Database.ClubGroup);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn5.HeaderText = "分類名稱";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn6.HeaderText = "職位名稱";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // jobBindingSource
+            // 
+            this.jobBindingSource.DataSource = typeof(ClubNotifier.Database.Job);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.AutoScroll = true;
+            this.tabPage2.Controls.Add(this.bindingNavigator4);
+            this.tabPage2.Controls.Add(this.personDataGridView);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(674, 380);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "聯絡人";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataSource = typeof(ClubNotifier.Database.Person);
+            // 
+            // personDataGridView
+            // 
+            this.personDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.personDataGridView.AutoGenerateColumns = false;
+            this.personDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.personDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn8});
+            this.personDataGridView.DataSource = this.personBindingSource;
+            this.personDataGridView.Location = new System.Drawing.Point(6, 31);
+            this.personDataGridView.Name = "personDataGridView";
+            this.personDataGridView.RowTemplate.Height = 24;
+            this.personDataGridView.Size = new System.Drawing.Size(662, 341);
+            this.personDataGridView.TabIndex = 0;
+            // 
+            // bindingNavigator4
+            // 
+            this.bindingNavigator4.AddNewItem = this.bindingNavigatorAddNewItem3;
+            this.bindingNavigator4.BindingSource = this.personBindingSource;
+            this.bindingNavigator4.CountItem = this.bindingNavigatorCountItem3;
+            this.bindingNavigator4.DeleteItem = this.bindingNavigatorDeleteItem3;
+            this.bindingNavigator4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem3,
+            this.bindingNavigatorMovePreviousItem3,
+            this.bindingNavigatorSeparator9,
+            this.bindingNavigatorPositionItem3,
+            this.bindingNavigatorCountItem3,
+            this.bindingNavigatorSeparator10,
+            this.bindingNavigatorMoveNextItem3,
+            this.bindingNavigatorMoveLastItem3,
+            this.bindingNavigatorSeparator11,
+            this.bindingNavigatorAddNewItem3,
+            this.bindingNavigatorDeleteItem3});
+            this.bindingNavigator4.Location = new System.Drawing.Point(3, 3);
+            this.bindingNavigator4.MoveFirstItem = this.bindingNavigatorMoveFirstItem3;
+            this.bindingNavigator4.MoveLastItem = this.bindingNavigatorMoveLastItem3;
+            this.bindingNavigator4.MoveNextItem = this.bindingNavigatorMoveNextItem3;
+            this.bindingNavigator4.MovePreviousItem = this.bindingNavigatorMovePreviousItem3;
+            this.bindingNavigator4.Name = "bindingNavigator4";
+            this.bindingNavigator4.PositionItem = this.bindingNavigatorPositionItem3;
+            this.bindingNavigator4.Size = new System.Drawing.Size(668, 25);
+            this.bindingNavigator4.TabIndex = 1;
+            this.bindingNavigator4.Text = "bindingNavigator4";
+            // 
+            // bindingNavigatorMoveFirstItem3
+            // 
+            this.bindingNavigatorMoveFirstItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem3.Image")));
+            this.bindingNavigatorMoveFirstItem3.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem3.Text = "移到最前面";
+            // 
+            // bindingNavigatorMovePreviousItem3
+            // 
+            this.bindingNavigatorMovePreviousItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem3.Image")));
+            this.bindingNavigatorMovePreviousItem3.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem3.Text = "移到上一個";
+            // 
+            // bindingNavigatorSeparator9
+            // 
+            this.bindingNavigatorSeparator9.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator9.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem3
+            // 
+            this.bindingNavigatorPositionItem3.AccessibleName = "位置";
+            this.bindingNavigatorPositionItem3.AutoSize = false;
+            this.bindingNavigatorPositionItem3.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem3.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem3.Text = "0";
+            this.bindingNavigatorPositionItem3.ToolTipText = "目前的位置";
+            // 
+            // bindingNavigatorCountItem3
+            // 
+            this.bindingNavigatorCountItem3.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem3.Size = new System.Drawing.Size(27, 22);
+            this.bindingNavigatorCountItem3.Text = "/{0}";
+            this.bindingNavigatorCountItem3.ToolTipText = "項目總數";
+            // 
+            // bindingNavigatorSeparator10
+            // 
+            this.bindingNavigatorSeparator10.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator10.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem3
+            // 
+            this.bindingNavigatorMoveNextItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem3.Image")));
+            this.bindingNavigatorMoveNextItem3.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem3.Text = "移到下一個";
+            // 
+            // bindingNavigatorMoveLastItem3
+            // 
+            this.bindingNavigatorMoveLastItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem3.Image")));
+            this.bindingNavigatorMoveLastItem3.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem3.Text = "移到最後面";
+            // 
+            // bindingNavigatorSeparator11
+            // 
+            this.bindingNavigatorSeparator11.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator11.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorAddNewItem3
+            // 
+            this.bindingNavigatorAddNewItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem3.Image")));
+            this.bindingNavigatorAddNewItem3.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem3.Text = "加入新的";
+            // 
+            // bindingNavigatorDeleteItem3
+            // 
+            this.bindingNavigatorDeleteItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem3.Image")));
+            this.bindingNavigatorDeleteItem3.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem3.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem3.Text = "刪除";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn7.HeaderText = "名字";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "EmailAddress";
+            this.dataGridViewTextBoxColumn10.HeaderText = "e-mail";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Club";
+            this.dataGridViewTextBoxColumn9.DataSource = this.clubBindingSource;
+            this.dataGridViewTextBoxColumn9.DisplayMember = "Name";
+            this.dataGridViewTextBoxColumn9.HeaderText = "所屬社團";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn9.ValueMember = "ClubCode";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Job";
+            this.dataGridViewTextBoxColumn8.DataSource = this.jobBindingSource;
+            this.dataGridViewTextBoxColumn8.DisplayMember = "Name";
+            this.dataGridViewTextBoxColumn8.HeaderText = "社團職位";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn8.ValueMember = "Id";
             // 
             // ContactForm
             // 
@@ -631,22 +827,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clubDataGridView)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clubGroupBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clubGroupDataGridView)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jobDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
             this.bindingNavigator3.ResumeLayout(false);
             this.bindingNavigator3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clubGroupBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jobDataGridView)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).EndInit();
+            this.bindingNavigator4.ResumeLayout(false);
+            this.bindingNavigator4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -701,12 +904,29 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem2;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem2;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.BindingNavigator bindingNavigator4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem3;
+        private System.Windows.Forms.BindingSource personBindingSource;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem3;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator9;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem3;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator10;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem3;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem3;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator11;
+        private System.Windows.Forms.DataGridView personDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn8;
     }
 }

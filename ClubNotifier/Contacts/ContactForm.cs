@@ -22,9 +22,13 @@ namespace ClubNotifier.Contacts {
         private void ContactForm_Load(object sender, EventArgs e) {
             context = new ClubNotifierContext();
 
-            context.Clubs.Load(); 
+            context.Clubs.Load();
+            context.ClubGroup.Load();
+            context.Jobs.Load();
 
-            this.clubBindingSource.DataSource = context.Clubs.Local.ToBindingList(); 
+            this.clubBindingSource.DataSource = context.Clubs.Local.ToBindingList();
+            this.clubGroupBindingSource.DataSource = context.ClubGroup.Local.ToBindingList();
+            this.jobBindingSource.DataSource = context.Jobs.Local.ToBindingList();
         }
 
         private void 儲存SToolStripButton_Click(object sender, EventArgs e) {
