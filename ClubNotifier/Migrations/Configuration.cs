@@ -1,5 +1,6 @@
 namespace ClubNotifier.Migrations
 {
+    using ClubNotifier.Database;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -27,6 +28,11 @@ namespace ClubNotifier.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Jobs.AddOrUpdate(
+                p => p.Name,
+                new Job { Name = "無" }
+            );
         }
     }
 }
