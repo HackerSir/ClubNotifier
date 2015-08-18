@@ -51,6 +51,7 @@
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contacts\Person.cs" />
     <Compile Include="EmailSettings.cs">
       <SubType>Form</SubType>
     </Compile>
