@@ -10,6 +10,6 @@ namespace ClubNotifier.Contacts {
         //聯絡人姓名
         public String Name { get; set; }
         //電子郵件
-        public MailAddress eMail;
+        public MailAddress eMail { get; set; }
     }
 }
