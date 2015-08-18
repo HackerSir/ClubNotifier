@@ -130,5 +130,29 @@ namespace ClubNotifier.Properties {
                 this["Entropy"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[]")]
+        public string JSON_People {
+            get {
+                return ((string)(this["JSON_People"]));
+            }
+            set {
+                this["JSON_People"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[]")]
+        public string JSON_Clubs {
+            get {
+                return ((string)(this["JSON_Clubs"]));
+            }
+            set {
+                this["JSON_Clubs"] = value;
+            }
+        }
     }
 }

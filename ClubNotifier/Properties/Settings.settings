@@ -29,5 +29,11 @@
     <Setting Name="Entropy" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="JSON_People" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[]</Value>
+    </Setting>
+    <Setting Name="JSON_Clubs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[]</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
