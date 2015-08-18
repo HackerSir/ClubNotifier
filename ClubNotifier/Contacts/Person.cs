@@ -11,5 +11,9 @@ namespace ClubNotifier.Contacts {
         public String Name { get; set; }
         //電子郵件
         public MailAddress eMail { get; set; }
+        //職位
+        public String Job { get; set; }
+        //所屬社團
+        public Club Club { get; set; }
     }
 }
