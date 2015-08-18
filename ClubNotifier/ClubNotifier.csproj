@@ -89,6 +89,9 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\ContactsForm.resx">
+      <DependentUpon>ContactsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmailSettings.resx">
       <DependentUpon>EmailSettings.cs</DependentUpon>
     </EmbeddedResource>
