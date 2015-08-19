@@ -11,13 +11,13 @@ namespace ClubNotifier.Contacts {
     class Contacts {
         public static Contacts instance = new Contacts();
 
-        public BindingList<Person> People;
+        public List<Person> People;
 
-        public BindingList<Club> Clubs;
+        public List<Club> Clubs;
 
         private Contacts() {
-            People = JsonConvert.DeserializeObject<BindingList<Person>>(Settings.Default.JSON_People);
-            Clubs = JsonConvert.DeserializeObject<BindingList<Club>>(Settings.Default.JSON_Clubs);
+            People = JsonConvert.DeserializeObject<List<Person>>(Settings.Default.JSON_People);
+            Clubs = JsonConvert.DeserializeObject<List<Club>>(Settings.Default.JSON_Clubs);
         }
 
         public void SaveData() {

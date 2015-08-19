@@ -10,5 +10,9 @@ namespace ClubNotifier.Contacts {
         public String ClubCode { get; set; }
         //社團名稱
         public String Name { get; set; }
+
+        public override string ToString() {
+            return String.Format("({0} {1})", ClubCode, Name);
+        }
     }
 }
