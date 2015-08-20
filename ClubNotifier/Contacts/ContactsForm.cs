@@ -28,12 +28,12 @@ namespace ClubNotifier.Contacts {
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {
             if (listBox1.SelectedIndex != 1) {
-                button2.Enabled = button3.Enabled = true;
+                EditClubButton.Enabled = RemoveClubButton.Enabled = true;
 
                 this.clubData1.Data = (Club) listBox1.SelectedItem;
             }
             else {
-                button2.Enabled = button3.Enabled = false;
+                EditClubButton.Enabled = RemoveClubButton.Enabled = false;
             }
         }
 
