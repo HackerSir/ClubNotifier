@@ -23,21 +23,21 @@
         /// 修改這個方法的內容。
         /// </summary>
         private void InitializeComponent() {
-            this.subjectTextBox = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // subjectTextBox
+            // textBox2
             // 
-            this.subjectTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.subjectTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.subjectTextBox.Location = new System.Drawing.Point(79, 3);
-            this.subjectTextBox.Name = "subjectTextBox";
-            this.subjectTextBox.Size = new System.Drawing.Size(196, 27);
-            this.subjectTextBox.TabIndex = 13;
+            this.textBox2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox2.Location = new System.Drawing.Point(79, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(196, 27);
+            this.textBox2.TabIndex = 13;
             // 
             // textBox1
             // 
@@ -76,7 +76,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.subjectTextBox);
+            this.Controls.Add(this.textBox2);
             this.Name = "ClubData";
             this.Size = new System.Drawing.Size(278, 69);
             this.ResumeLayout(false);
@@ -86,7 +86,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox subjectTextBox;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

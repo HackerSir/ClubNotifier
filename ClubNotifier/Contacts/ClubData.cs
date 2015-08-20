@@ -13,5 +13,14 @@ namespace ClubNotifier.Contacts {
         public ClubData() {
             InitializeComponent();
         }
+
+        public Boolean isDataReadOnly {
+            get {
+                return textBox1.ReadOnly;
+            }
+            set {
+                textBox1.ReadOnly = textBox2.ReadOnly = value;
+            }
+        }
     }
 }

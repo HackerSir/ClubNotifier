@@ -145,6 +145,7 @@
             // 
             // clubData1
             // 
+            this.clubData1.isDataReadOnly = true;
             this.clubData1.Location = new System.Drawing.Point(2, 32);
             this.clubData1.Name = "clubData1";
             this.clubData1.Size = new System.Drawing.Size(300, 69);
