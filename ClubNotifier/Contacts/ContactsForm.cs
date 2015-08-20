@@ -27,13 +27,15 @@ namespace ClubNotifier.Contacts {
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {
-            if (listBox1.SelectedIndex != 1) {
+            if (listBox1.SelectedIndex != -1) {
                 EditClubButton.Enabled = RemoveClubButton.Enabled = true;
 
                 this.clubData1.Data = (Club) listBox1.SelectedItem;
             }
             else {
                 EditClubButton.Enabled = RemoveClubButton.Enabled = false;
+
+                this.clubData1.Data = null;
             }
         }
 
@@ -42,6 +44,18 @@ namespace ClubNotifier.Contacts {
             Contacts.instance.Clubs = listBox1.Items.Cast<Club>().ToList();
 
             Contacts.instance.SaveData();
+        }
+
+        private void EditClubButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void RemoveClubButton_Click(object sender, EventArgs e) {
+            if (listBox1.SelectedIndex != -1) {
+                if (MessageBox.Show(String.Format("你確定要刪除 {0} 嗎？", listBox1.SelectedItem), "確認", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                    listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                }
+            }
         }
     }
 }

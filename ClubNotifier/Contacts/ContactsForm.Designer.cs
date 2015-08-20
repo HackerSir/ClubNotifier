@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            ClubNotifier.Contacts.Club club1 = new ClubNotifier.Contacts.Club();
+            ClubNotifier.Contacts.Club club3 = new ClubNotifier.Contacts.Club();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -127,6 +127,7 @@
             this.RemoveClubButton.TabIndex = 3;
             this.RemoveClubButton.Text = "刪除";
             this.RemoveClubButton.UseVisualStyleBackColor = true;
+            this.RemoveClubButton.Click += new System.EventHandler(this.RemoveClubButton_Click);
             // 
             // EditClubButton
             // 
@@ -137,6 +138,7 @@
             this.EditClubButton.TabIndex = 2;
             this.EditClubButton.Text = "編輯";
             this.EditClubButton.UseVisualStyleBackColor = true;
+            this.EditClubButton.Click += new System.EventHandler(this.EditClubButton_Click);
             // 
             // AddClubButton
             // 
@@ -150,9 +152,9 @@
             // 
             // clubData1
             // 
-            club1.ClubCode = null;
-            club1.Name = null;
-            this.clubData1.Data = club1;
+            club3.ClubCode = null;
+            club3.Name = null;
+            this.clubData1.Data = club3;
             this.clubData1.isDataReadOnly = true;
             this.clubData1.Location = new System.Drawing.Point(2, 32);
             this.clubData1.Name = "clubData1";

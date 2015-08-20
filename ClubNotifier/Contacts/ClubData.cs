@@ -29,18 +29,28 @@ namespace ClubNotifier.Contacts {
                 return data;
             }
             set {
-                data = new Club(value);
-                textBox2.Text = data.ClubCode;
-                textBox1.Text = data.Name;
+                if (value != null) {
+                    data = new Club(value);
+                    textBox2.Text = data.ClubCode;
+                    textBox1.Text = data.Name;
+                }
+                else {
+                    data = null;
+                    textBox2.Text = textBox1.Text = "";
+                }
             }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e) {
-            data.ClubCode = textBox2.Text;
+            if (data != null) {
+                data.ClubCode = textBox2.Text;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) {
-            data.Name = textBox1.Text;
+            if (data != null) {
+                data.Name = textBox1.Text;
+            }
         }
     }
 }
