@@ -62,6 +62,12 @@
     <Compile Include="Contacts\ClubData.Designer.cs">
       <DependentUpon>ClubData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contacts\ClubDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts\ClubDataForm.Designer.cs">
+      <DependentUpon>ClubDataForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contacts\Contacts.cs" />
     <Compile Include="Contacts\ContactsForm.cs">
       <SubType>Form</SubType>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contacts\ClubData.resx">
       <DependentUpon>ClubData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\ClubDataForm.resx">
+      <DependentUpon>ClubDataForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contacts\ContactsForm.resx">
       <DependentUpon>ContactsForm.cs</DependentUpon>
