@@ -29,15 +29,9 @@ namespace ClubNotifier.Contacts {
                 return data;
             }
             set {
-                if (value != null) {
-                    data = new Club(value);
-                    textBox2.Text = data.ClubCode;
-                    textBox1.Text = data.Name;
-                }
-                else {
-                    data = null;
-                    textBox2.Text = textBox1.Text = "";
-                }
+                data = value;
+                textBox2.Text = (data == null) ? "" : data.ClubCode;
+                textBox1.Text = (data == null) ? "" : data.Name;
             }
         }
 

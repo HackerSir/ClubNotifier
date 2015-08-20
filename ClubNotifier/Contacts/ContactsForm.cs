@@ -47,7 +47,14 @@ namespace ClubNotifier.Contacts {
         }
 
         private void EditClubButton_Click(object sender, EventArgs e) {
+            if (listBox1.SelectedIndex != -1) {
+                var newClubForm = new ClubDataForm();
+                newClubForm.getClubData().Data = (Club) listBox1.SelectedItem;
 
+                if (newClubForm.ShowDialog() == DialogResult.OK) {
+                    listBox1.Items[listBox1.SelectedIndex] = newClubForm.getClubData().Data;
+                }
+            }
         }
 
         private void RemoveClubButton_Click(object sender, EventArgs e) {
