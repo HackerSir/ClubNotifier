@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            ClubNotifier.Contacts.Club club1 = new ClubNotifier.Contacts.Club();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -115,9 +116,11 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(156, 346);
             this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(167, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
@@ -127,6 +130,7 @@
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(86, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
@@ -142,9 +146,13 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "新增";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // clubData1
             // 
+            club1.ClubCode = null;
+            club1.Name = null;
+            this.clubData1.Data = club1;
             this.clubData1.isDataReadOnly = true;
             this.clubData1.Location = new System.Drawing.Point(2, 32);
             this.clubData1.Name = "clubData1";
@@ -159,6 +167,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "ContactsForm";
             this.Text = "ContactsForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContactsForm_FormClosing);
             this.Load += new System.EventHandler(this.ContactsForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

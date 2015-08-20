@@ -17,5 +17,31 @@ namespace ClubNotifier.Contacts {
         private void ContactsForm_Load(object sender, EventArgs e) {
             listBox1.Items.AddRange(Contacts.instance.Clubs.ToArray());
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            var newClubForm = new ClubDataForm();
+
+            if (newClubForm.ShowDialog() == DialogResult.OK) {
+                listBox1.Items.Add(newClubForm.getClubData().Data);
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {
+            if (listBox1.SelectedIndex != 1) {
+                button2.Enabled = button3.Enabled = true;
+
+                this.clubData1.Data = (Club) listBox1.SelectedItem;
+            }
+            else {
+                button2.Enabled = button3.Enabled = false;
+            }
+        }
+
+        private void ContactsForm_FormClosing(object sender, FormClosingEventArgs e) {
+            //http://stackoverflow.com/questions/1565504/most-succinct-way-to-convert-listbox-items-to-a-generic-list
+            Contacts.instance.Clubs = listBox1.Items.Cast<Club>().ToList();
+
+            Contacts.instance.SaveData();
+        }
     }
 }

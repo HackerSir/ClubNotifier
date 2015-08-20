@@ -23,6 +23,8 @@ namespace ClubNotifier.Contacts {
         public void SaveData() {
             Settings.Default.JSON_People = JsonConvert.SerializeObject(People);
             Settings.Default.JSON_Clubs = JsonConvert.SerializeObject(Clubs);
+
+            Settings.Default.Save();
         }
     }
 }

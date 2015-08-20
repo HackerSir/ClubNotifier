@@ -22,5 +22,25 @@ namespace ClubNotifier.Contacts {
                 textBox1.ReadOnly = textBox2.ReadOnly = value;
             }
         }
+
+        private Club data = new Club();
+        public Club Data {
+            get {
+                return data;
+            }
+            set {
+                data = new Club(value);
+                textBox2.Text = data.ClubCode;
+                textBox1.Text = data.Name;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e) {
+            data.ClubCode = textBox2.Text;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e) {
+            data.Name = textBox1.Text;
+        }
     }
 }
