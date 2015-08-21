@@ -76,6 +76,12 @@
       <DependentUpon>ContactsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Contacts\Person.cs" />
+    <Compile Include="Contacts\PersonData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Contacts\PersonData.Designer.cs">
+      <DependentUpon>PersonData.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmailSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contacts\ContactsForm.resx">
       <DependentUpon>ContactsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\PersonData.resx">
+      <DependentUpon>PersonData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmailSettings.resx">
       <DependentUpon>EmailSettings.cs</DependentUpon>

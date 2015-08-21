@@ -15,5 +15,9 @@ namespace ClubNotifier.Contacts {
         public String Job { get; set; }
         //所屬社團
         public Club Club { get; set; }
+
+        public override string ToString() {
+            return Name;
+        }
     }
 }

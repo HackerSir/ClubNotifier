@@ -64,5 +64,6 @@ namespace ClubNotifier.Contacts {
 
             Contacts.instance.SaveData();
         }
+
     }
 }
