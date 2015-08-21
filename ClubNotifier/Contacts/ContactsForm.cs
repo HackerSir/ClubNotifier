@@ -39,13 +39,6 @@ namespace ClubNotifier.Contacts {
             }
         }
 
-        private void ContactsForm_FormClosing(object sender, FormClosingEventArgs e) {
-            //http://stackoverflow.com/questions/1565504/most-succinct-way-to-convert-listbox-items-to-a-generic-list
-            Contacts.instance.Clubs = listBox1.Items.Cast<Club>().ToList();
-
-            Contacts.instance.SaveData();
-        }
-
         private void EditClubButton_Click(object sender, EventArgs e) {
             if (listBox1.SelectedIndex != -1) {
                 var newClubForm = new ClubDataForm();
@@ -63,6 +56,13 @@ namespace ClubNotifier.Contacts {
                     listBox1.Items.RemoveAt(listBox1.SelectedIndex);
                 }
             }
+        }
+
+        private void tabControl1_Deselecting(object sender, TabControlCancelEventArgs e) {
+            //http://stackoverflow.com/questions/1565504/most-succinct-way-to-convert-listbox-items-to-a-generic-list
+            Contacts.instance.Clubs = listBox1.Items.Cast<Club>().ToList();
+
+            Contacts.instance.SaveData();
         }
     }
 }

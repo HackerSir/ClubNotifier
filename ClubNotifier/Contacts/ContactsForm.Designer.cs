@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            ClubNotifier.Contacts.Club club3 = new ClubNotifier.Contacts.Club();
+            ClubNotifier.Contacts.Club club1 = new ClubNotifier.Contacts.Club();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -33,10 +33,12 @@
             this.RemoveClubButton = new System.Windows.Forms.Button();
             this.EditClubButton = new System.Windows.Forms.Button();
             this.AddClubButton = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.clubData1 = new ClubNotifier.Contacts.ClubData();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -55,6 +57,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(482, 378);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Deselecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Deselecting);
             // 
             // tabPage1
             // 
@@ -64,7 +67,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(474, 352);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "聯絡人";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
@@ -72,6 +75,10 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(3, 3);
             this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.listBox2);
             this.splitContainer1.Size = new System.Drawing.Size(468, 346);
             this.splitContainer1.SplitterDistance = 156;
             this.splitContainer1.TabIndex = 0;
@@ -150,11 +157,21 @@
             this.AddClubButton.UseVisualStyleBackColor = true;
             this.AddClubButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // listBox2
+            // 
+            this.listBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 12;
+            this.listBox2.Location = new System.Drawing.Point(0, 0);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(156, 346);
+            this.listBox2.TabIndex = 0;
+            // 
             // clubData1
             // 
-            club3.ClubCode = null;
-            club3.Name = null;
-            this.clubData1.Data = club3;
+            club1.ClubCode = null;
+            club1.Name = null;
+            this.clubData1.Data = club1;
             this.clubData1.isDataReadOnly = true;
             this.clubData1.Location = new System.Drawing.Point(2, 32);
             this.clubData1.Name = "clubData1";
@@ -169,10 +186,10 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "ContactsForm";
             this.Text = "ContactsForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContactsForm_FormClosing);
             this.Load += new System.EventHandler(this.ContactsForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -196,6 +213,7 @@
         private System.Windows.Forms.Button RemoveClubButton;
         private System.Windows.Forms.Button EditClubButton;
         private System.Windows.Forms.Button AddClubButton;
+        private System.Windows.Forms.ListBox listBox2;
 
     }
 }

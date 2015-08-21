@@ -13,11 +13,6 @@ namespace ClubNotifier.Contacts  {
 
         public Club() { }
 
-        public Club(Club other) {
-            this.ClubCode = other.ClubCode;
-            this.Name = other.Name;
-        }
-
         public override string ToString() {
             return String.Format("({0} {1})", ClubCode, Name);
         }
