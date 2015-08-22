@@ -15,6 +15,7 @@ namespace ClubNotifier.Contacts {
         }
 
         private void ContactsForm_Load(object sender, EventArgs e) {
+            PersonListBox.Items.AddRange(Contacts.instance.People.ToArray());
             ClubListBox.Items.AddRange(Contacts.instance.Clubs.ToArray());
         }
 
