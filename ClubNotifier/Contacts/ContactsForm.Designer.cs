@@ -28,15 +28,15 @@
             this.PersonTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.PersonListBox = new System.Windows.Forms.ListBox();
+            this.AddPersonButton = new System.Windows.Forms.Button();
             this.EditPersonButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
-            this.AddPersonButton = new System.Windows.Forms.Button();
             this.ClubTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.ClubListBox = new System.Windows.Forms.ListBox();
-            this.RemoveClubButton = new System.Windows.Forms.Button();
-            this.EditClubButton = new System.Windows.Forms.Button();
             this.AddClubButton = new System.Windows.Forms.Button();
+            this.EditClubButton = new System.Windows.Forms.Button();
+            this.RemoveClubButton = new System.Windows.Forms.Button();
             this.personData1 = new ClubNotifier.Contacts.PersonData();
             this.clubData1 = new ClubNotifier.Contacts.ClubData();
             this.tabControl1.SuspendLayout();
@@ -105,6 +105,15 @@
             this.PersonListBox.Size = new System.Drawing.Size(156, 346);
             this.PersonListBox.TabIndex = 0;
             // 
+            // AddPersonButton
+            // 
+            this.AddPersonButton.Location = new System.Drawing.Point(3, 3);
+            this.AddPersonButton.Name = "AddPersonButton";
+            this.AddPersonButton.Size = new System.Drawing.Size(75, 23);
+            this.AddPersonButton.TabIndex = 1;
+            this.AddPersonButton.Text = "新增";
+            this.AddPersonButton.UseVisualStyleBackColor = true;
+            // 
             // EditPersonButton
             // 
             this.EditPersonButton.Location = new System.Drawing.Point(165, 3);
@@ -122,15 +131,6 @@
             this.RemoveButton.TabIndex = 2;
             this.RemoveButton.Text = "修改";
             this.RemoveButton.UseVisualStyleBackColor = true;
-            // 
-            // AddPersonButton
-            // 
-            this.AddPersonButton.Location = new System.Drawing.Point(3, 3);
-            this.AddPersonButton.Name = "AddPersonButton";
-            this.AddPersonButton.Size = new System.Drawing.Size(75, 23);
-            this.AddPersonButton.TabIndex = 1;
-            this.AddPersonButton.Text = "新增";
-            this.AddPersonButton.UseVisualStyleBackColor = true;
             // 
             // ClubTabPage
             // 
@@ -174,16 +174,15 @@
             this.ClubListBox.TabIndex = 0;
             this.ClubListBox.SelectedIndexChanged += new System.EventHandler(this.ClubListBox_SelectedIndexChanged);
             // 
-            // RemoveClubButton
+            // AddClubButton
             // 
-            this.RemoveClubButton.Enabled = false;
-            this.RemoveClubButton.Location = new System.Drawing.Point(167, 3);
-            this.RemoveClubButton.Name = "RemoveClubButton";
-            this.RemoveClubButton.Size = new System.Drawing.Size(75, 23);
-            this.RemoveClubButton.TabIndex = 3;
-            this.RemoveClubButton.Text = "刪除";
-            this.RemoveClubButton.UseVisualStyleBackColor = true;
-            this.RemoveClubButton.Click += new System.EventHandler(this.RemoveClubButton_Click);
+            this.AddClubButton.Location = new System.Drawing.Point(5, 3);
+            this.AddClubButton.Name = "AddClubButton";
+            this.AddClubButton.Size = new System.Drawing.Size(75, 23);
+            this.AddClubButton.TabIndex = 1;
+            this.AddClubButton.Text = "新增";
+            this.AddClubButton.UseVisualStyleBackColor = true;
+            this.AddClubButton.Click += new System.EventHandler(this.AddClubButton_Click);
             // 
             // EditClubButton
             // 
@@ -196,18 +195,20 @@
             this.EditClubButton.UseVisualStyleBackColor = true;
             this.EditClubButton.Click += new System.EventHandler(this.EditClubButton_Click);
             // 
-            // AddClubButton
+            // RemoveClubButton
             // 
-            this.AddClubButton.Location = new System.Drawing.Point(5, 3);
-            this.AddClubButton.Name = "AddClubButton";
-            this.AddClubButton.Size = new System.Drawing.Size(75, 23);
-            this.AddClubButton.TabIndex = 1;
-            this.AddClubButton.Text = "新增";
-            this.AddClubButton.UseVisualStyleBackColor = true;
-            this.AddClubButton.Click += new System.EventHandler(this.AddClubButton_Click);
+            this.RemoveClubButton.Enabled = false;
+            this.RemoveClubButton.Location = new System.Drawing.Point(167, 3);
+            this.RemoveClubButton.Name = "RemoveClubButton";
+            this.RemoveClubButton.Size = new System.Drawing.Size(75, 23);
+            this.RemoveClubButton.TabIndex = 3;
+            this.RemoveClubButton.Text = "刪除";
+            this.RemoveClubButton.UseVisualStyleBackColor = true;
+            this.RemoveClubButton.Click += new System.EventHandler(this.RemoveClubButton_Click);
             // 
             // personData1
             // 
+            this.personData1.isDataReadOnly = true;
             this.personData1.Location = new System.Drawing.Point(2, 32);
             this.personData1.Name = "personData1";
             this.personData1.Size = new System.Drawing.Size(301, 135);

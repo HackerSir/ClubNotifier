@@ -82,6 +82,12 @@
     <Compile Include="Contacts\PersonData.Designer.cs">
       <DependentUpon>PersonData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contacts\PersonDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts\PersonDataForm.Designer.cs">
+      <DependentUpon>PersonDataForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmailSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contacts\PersonData.resx">
       <DependentUpon>PersonData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts\PersonDataForm.resx">
+      <DependentUpon>PersonDataForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmailSettings.resx">
       <DependentUpon>EmailSettings.cs</DependentUpon>
