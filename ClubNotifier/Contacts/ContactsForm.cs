@@ -15,22 +15,14 @@ namespace ClubNotifier.Contacts {
         }
 
         private void ContactsForm_Load(object sender, EventArgs e) {
-            listBox1.Items.AddRange(Contacts.instance.Clubs.ToArray());
+            ClubListBox.Items.AddRange(Contacts.instance.Clubs.ToArray());
         }
 
-        private void button1_Click(object sender, EventArgs e) {
-            var newClubForm = new ClubDataForm();
-
-            if (newClubForm.ShowDialog() == DialogResult.OK) {
-                listBox1.Items.Add(newClubForm.getClubData().Data);
-            }
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {
-            if (listBox1.SelectedIndex != -1) {
+        private void ClubListBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if (ClubListBox.SelectedIndex != -1) {
                 EditClubButton.Enabled = RemoveClubButton.Enabled = true;
 
-                this.clubData1.Data = (Club) listBox1.SelectedItem;
+                this.clubData1.Data = (Club) ClubListBox.SelectedItem;
             }
             else {
                 EditClubButton.Enabled = RemoveClubButton.Enabled = false;
@@ -39,28 +31,36 @@ namespace ClubNotifier.Contacts {
             }
         }
 
+        private void AddClubButton_Click(object sender, EventArgs e) {
+            var newClubForm = new ClubDataForm();
+
+            if (newClubForm.ShowDialog() == DialogResult.OK) {
+                ClubListBox.Items.Add(newClubForm.getClubData().Data);
+            }
+        }
+
         private void EditClubButton_Click(object sender, EventArgs e) {
-            if (listBox1.SelectedIndex != -1) {
+            if (ClubListBox.SelectedIndex != -1) {
                 var newClubForm = new ClubDataForm();
-                newClubForm.getClubData().Data = (Club) listBox1.SelectedItem;
+                newClubForm.getClubData().Data = (Club) ClubListBox.SelectedItem;
 
                 if (newClubForm.ShowDialog() == DialogResult.OK) {
-                    listBox1.Items[listBox1.SelectedIndex] = newClubForm.getClubData().Data;
+                    ClubListBox.Items[ClubListBox.SelectedIndex] = newClubForm.getClubData().Data;
                 }
             }
         }
 
         private void RemoveClubButton_Click(object sender, EventArgs e) {
-            if (listBox1.SelectedIndex != -1) {
-                if (MessageBox.Show(String.Format("你確定要刪除 {0} 嗎？", listBox1.SelectedItem), "確認", MessageBoxButtons.YesNo) == DialogResult.Yes) {
-                    listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            if (ClubListBox.SelectedIndex != -1) {
+                if (MessageBox.Show(String.Format("你確定要刪除 {0} 嗎？", ClubListBox.SelectedItem), "確認", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                    ClubListBox.Items.RemoveAt(ClubListBox.SelectedIndex);
                 }
             }
         }
 
         private void tabControl1_Deselecting(object sender, TabControlCancelEventArgs e) {
             //http://stackoverflow.com/questions/1565504/most-succinct-way-to-convert-listbox-items-to-a-generic-list
-            Contacts.instance.Clubs = listBox1.Items.Cast<Club>().ToList();
+            Contacts.instance.Clubs = ClubListBox.Items.Cast<Club>().ToList();
 
             Contacts.instance.SaveData();
         }

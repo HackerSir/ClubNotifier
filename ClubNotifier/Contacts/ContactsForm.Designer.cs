@@ -25,27 +25,27 @@
         private void InitializeComponent() {
             ClubNotifier.Contacts.Club club1 = new ClubNotifier.Contacts.Club();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.PersonTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.personData1 = new ClubNotifier.Contacts.PersonData();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.PersonListBox = new System.Windows.Forms.ListBox();
+            this.EditPersonButton = new System.Windows.Forms.Button();
+            this.RemoveButton = new System.Windows.Forms.Button();
+            this.AddPersonButton = new System.Windows.Forms.Button();
+            this.ClubTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ClubListBox = new System.Windows.Forms.ListBox();
             this.RemoveClubButton = new System.Windows.Forms.Button();
             this.EditClubButton = new System.Windows.Forms.Button();
             this.AddClubButton = new System.Windows.Forms.Button();
+            this.personData1 = new ClubNotifier.Contacts.PersonData();
             this.clubData1 = new ClubNotifier.Contacts.ClubData();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.PersonTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.ClubTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -54,8 +54,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.PersonTabPage);
+            this.tabControl1.Controls.Add(this.ClubTabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -64,16 +64,16 @@
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Deselecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl1_Deselecting);
             // 
-            // tabPage1
+            // PersonTabPage
             // 
-            this.tabPage1.Controls.Add(this.splitContainer1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(474, 352);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "聯絡人";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.PersonTabPage.Controls.Add(this.splitContainer1);
+            this.PersonTabPage.Location = new System.Drawing.Point(4, 22);
+            this.PersonTabPage.Name = "PersonTabPage";
+            this.PersonTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.PersonTabPage.Size = new System.Drawing.Size(474, 352);
+            this.PersonTabPage.TabIndex = 0;
+            this.PersonTabPage.Text = "聯絡人";
+            this.PersonTabPage.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
             // 
@@ -83,72 +83,65 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.listBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.PersonListBox);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.button3);
-            this.splitContainer1.Panel2.Controls.Add(this.button2);
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.AddPersonButton);
+            this.splitContainer1.Panel2.Controls.Add(this.EditPersonButton);
+            this.splitContainer1.Panel2.Controls.Add(this.RemoveButton);
             this.splitContainer1.Panel2.Controls.Add(this.personData1);
             this.splitContainer1.Size = new System.Drawing.Size(468, 346);
             this.splitContainer1.SplitterDistance = 156;
             this.splitContainer1.TabIndex = 0;
             // 
-            // listBox2
+            // PersonListBox
             // 
-            this.listBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 12;
-            this.listBox2.Location = new System.Drawing.Point(0, 0);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(156, 346);
-            this.listBox2.TabIndex = 0;
+            this.PersonListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PersonListBox.FormattingEnabled = true;
+            this.PersonListBox.ItemHeight = 12;
+            this.PersonListBox.Location = new System.Drawing.Point(0, 0);
+            this.PersonListBox.Name = "PersonListBox";
+            this.PersonListBox.Size = new System.Drawing.Size(156, 346);
+            this.PersonListBox.TabIndex = 0;
             // 
-            // button3
+            // EditPersonButton
             // 
-            this.button3.Location = new System.Drawing.Point(165, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EditPersonButton.Location = new System.Drawing.Point(165, 3);
+            this.EditPersonButton.Name = "EditPersonButton";
+            this.EditPersonButton.Size = new System.Drawing.Size(75, 23);
+            this.EditPersonButton.TabIndex = 3;
+            this.EditPersonButton.Text = "刪除";
+            this.EditPersonButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // RemoveButton
             // 
-            this.button2.Location = new System.Drawing.Point(84, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.RemoveButton.Location = new System.Drawing.Point(84, 3);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
+            this.RemoveButton.TabIndex = 2;
+            this.RemoveButton.Text = "修改";
+            this.RemoveButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // AddPersonButton
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddPersonButton.Location = new System.Drawing.Point(3, 3);
+            this.AddPersonButton.Name = "AddPersonButton";
+            this.AddPersonButton.Size = new System.Drawing.Size(75, 23);
+            this.AddPersonButton.TabIndex = 1;
+            this.AddPersonButton.Text = "新增";
+            this.AddPersonButton.UseVisualStyleBackColor = true;
             // 
-            // personData1
+            // ClubTabPage
             // 
-            this.personData1.Location = new System.Drawing.Point(2, 32);
-            this.personData1.Name = "personData1";
-            this.personData1.Size = new System.Drawing.Size(301, 135);
-            this.personData1.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.splitContainer2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(474, 352);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "社團";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.ClubTabPage.Controls.Add(this.splitContainer2);
+            this.ClubTabPage.Location = new System.Drawing.Point(4, 22);
+            this.ClubTabPage.Name = "ClubTabPage";
+            this.ClubTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ClubTabPage.Size = new System.Drawing.Size(474, 352);
+            this.ClubTabPage.TabIndex = 1;
+            this.ClubTabPage.Text = "社團";
+            this.ClubTabPage.UseVisualStyleBackColor = true;
             // 
             // splitContainer2
             // 
@@ -158,28 +151,28 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.listBox1);
+            this.splitContainer2.Panel1.Controls.Add(this.ClubListBox);
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.RemoveClubButton);
-            this.splitContainer2.Panel2.Controls.Add(this.EditClubButton);
             this.splitContainer2.Panel2.Controls.Add(this.AddClubButton);
+            this.splitContainer2.Panel2.Controls.Add(this.EditClubButton);
+            this.splitContainer2.Panel2.Controls.Add(this.RemoveClubButton);
             this.splitContainer2.Panel2.Controls.Add(this.clubData1);
             this.splitContainer2.Size = new System.Drawing.Size(468, 346);
             this.splitContainer2.SplitterDistance = 156;
             this.splitContainer2.TabIndex = 0;
             // 
-            // listBox1
+            // ClubListBox
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(156, 346);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.ClubListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClubListBox.FormattingEnabled = true;
+            this.ClubListBox.ItemHeight = 12;
+            this.ClubListBox.Location = new System.Drawing.Point(0, 0);
+            this.ClubListBox.Name = "ClubListBox";
+            this.ClubListBox.Size = new System.Drawing.Size(156, 346);
+            this.ClubListBox.TabIndex = 0;
+            this.ClubListBox.SelectedIndexChanged += new System.EventHandler(this.ClubListBox_SelectedIndexChanged);
             // 
             // RemoveClubButton
             // 
@@ -211,7 +204,14 @@
             this.AddClubButton.TabIndex = 1;
             this.AddClubButton.Text = "新增";
             this.AddClubButton.UseVisualStyleBackColor = true;
-            this.AddClubButton.Click += new System.EventHandler(this.button1_Click);
+            this.AddClubButton.Click += new System.EventHandler(this.AddClubButton_Click);
+            // 
+            // personData1
+            // 
+            this.personData1.Location = new System.Drawing.Point(2, 32);
+            this.personData1.Name = "personData1";
+            this.personData1.Size = new System.Drawing.Size(301, 135);
+            this.personData1.TabIndex = 0;
             // 
             // clubData1
             // 
@@ -234,12 +234,12 @@
             this.Text = "ContactsForm";
             this.Load += new System.EventHandler(this.ContactsForm_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.PersonTabPage.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.ClubTabPage.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -251,19 +251,19 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage PersonTabPage;
+        private System.Windows.Forms.TabPage ClubTabPage;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox ClubListBox;
         private ClubData clubData1;
         private System.Windows.Forms.Button RemoveClubButton;
         private System.Windows.Forms.Button EditClubButton;
         private System.Windows.Forms.Button AddClubButton;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox PersonListBox;
+        private System.Windows.Forms.Button EditPersonButton;
+        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.Button AddPersonButton;
         private PersonData personData1;
 
     }
