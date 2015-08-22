@@ -23,62 +23,60 @@
         /// 修改這個方法的內容。
         /// </summary>
         private void InitializeComponent() {
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.ClubCodeTextBox = new System.Windows.Forms.TextBox();
+            this.ClubNameTextBox = new System.Windows.Forms.TextBox();
+            this.ClubCodeLabel = new System.Windows.Forms.Label();
+            this.ClubNameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox2
+            // ClubCodeTextBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ClubCodeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox2.Location = new System.Drawing.Point(79, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 27);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.ClubCodeTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ClubCodeTextBox.Location = new System.Drawing.Point(79, 3);
+            this.ClubCodeTextBox.Name = "ClubCodeTextBox";
+            this.ClubCodeTextBox.Size = new System.Drawing.Size(196, 27);
+            this.ClubCodeTextBox.TabIndex = 13;
             // 
-            // textBox1
+            // ClubNameTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ClubNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(79, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 27);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ClubNameTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ClubNameTextBox.Location = new System.Drawing.Point(79, 36);
+            this.ClubNameTextBox.Name = "ClubNameTextBox";
+            this.ClubNameTextBox.Size = new System.Drawing.Size(196, 27);
+            this.ClubNameTextBox.TabIndex = 14;
             // 
-            // label1
+            // ClubCodeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 17);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "社團代號：";
+            this.ClubCodeLabel.AutoSize = true;
+            this.ClubCodeLabel.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ClubCodeLabel.Location = new System.Drawing.Point(3, 6);
+            this.ClubCodeLabel.Name = "ClubCodeLabel";
+            this.ClubCodeLabel.Size = new System.Drawing.Size(73, 17);
+            this.ClubCodeLabel.TabIndex = 15;
+            this.ClubCodeLabel.Text = "社團代號：";
             // 
-            // label2
+            // ClubNameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(3, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "社團名稱：";
+            this.ClubNameLabel.AutoSize = true;
+            this.ClubNameLabel.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ClubNameLabel.Location = new System.Drawing.Point(3, 39);
+            this.ClubNameLabel.Name = "ClubNameLabel";
+            this.ClubNameLabel.Size = new System.Drawing.Size(73, 17);
+            this.ClubNameLabel.TabIndex = 16;
+            this.ClubNameLabel.Text = "社團名稱：";
             // 
             // ClubData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ClubCodeLabel);
+            this.Controls.Add(this.ClubCodeTextBox);
+            this.Controls.Add(this.ClubNameLabel);
+            this.Controls.Add(this.ClubNameTextBox);
             this.Name = "ClubData";
             this.Size = new System.Drawing.Size(278, 69);
             this.ResumeLayout(false);
@@ -88,9 +86,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox ClubCodeTextBox;
+        private System.Windows.Forms.TextBox ClubNameTextBox;
+        private System.Windows.Forms.Label ClubCodeLabel;
+        private System.Windows.Forms.Label ClubNameLabel;
     }
 }

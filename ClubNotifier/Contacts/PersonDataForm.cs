@@ -13,5 +13,9 @@ namespace ClubNotifier.Contacts {
         public PersonDataForm() {
             InitializeComponent();
         }
+
+        public PersonData getPersonData() {
+            return this.personData1;
+        }
     }
 }

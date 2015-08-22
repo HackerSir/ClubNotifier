@@ -30,6 +30,7 @@
             // 
             // personData1
             // 
+            this.personData1.isDataReadOnly = false;
             this.personData1.Location = new System.Drawing.Point(12, 12);
             this.personData1.Name = "personData1";
             this.personData1.Size = new System.Drawing.Size(278, 135);
@@ -37,7 +38,7 @@
             // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(215, 153);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);

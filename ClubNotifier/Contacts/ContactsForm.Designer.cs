@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            ClubNotifier.Contacts.Club club1 = new ClubNotifier.Contacts.Club();
+            ClubNotifier.Contacts.Club club2 = new ClubNotifier.Contacts.Club();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PersonTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -31,13 +31,13 @@
             this.AddPersonButton = new System.Windows.Forms.Button();
             this.EditPersonButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
+            this.personData1 = new ClubNotifier.Contacts.PersonData();
             this.ClubTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.ClubListBox = new System.Windows.Forms.ListBox();
             this.AddClubButton = new System.Windows.Forms.Button();
             this.EditClubButton = new System.Windows.Forms.Button();
             this.RemoveClubButton = new System.Windows.Forms.Button();
-            this.personData1 = new ClubNotifier.Contacts.PersonData();
             this.clubData1 = new ClubNotifier.Contacts.ClubData();
             this.tabControl1.SuspendLayout();
             this.PersonTabPage.SuspendLayout();
@@ -104,6 +104,7 @@
             this.PersonListBox.Name = "PersonListBox";
             this.PersonListBox.Size = new System.Drawing.Size(156, 346);
             this.PersonListBox.TabIndex = 0;
+            this.PersonListBox.SelectedIndexChanged += new System.EventHandler(this.PersonListBox_SelectedIndexChanged);
             // 
             // AddPersonButton
             // 
@@ -113,24 +114,37 @@
             this.AddPersonButton.TabIndex = 1;
             this.AddPersonButton.Text = "新增";
             this.AddPersonButton.UseVisualStyleBackColor = true;
+            this.AddPersonButton.Click += new System.EventHandler(this.AddPersonButton_Click);
             // 
             // EditPersonButton
             // 
+            this.EditPersonButton.Enabled = false;
             this.EditPersonButton.Location = new System.Drawing.Point(165, 3);
             this.EditPersonButton.Name = "EditPersonButton";
             this.EditPersonButton.Size = new System.Drawing.Size(75, 23);
             this.EditPersonButton.TabIndex = 3;
             this.EditPersonButton.Text = "刪除";
             this.EditPersonButton.UseVisualStyleBackColor = true;
+            this.EditPersonButton.Click += new System.EventHandler(this.EditPersonButton_Click);
             // 
             // RemoveButton
             // 
+            this.RemoveButton.Enabled = false;
             this.RemoveButton.Location = new System.Drawing.Point(84, 3);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(75, 23);
             this.RemoveButton.TabIndex = 2;
             this.RemoveButton.Text = "修改";
             this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
+            // 
+            // personData1
+            // 
+            this.personData1.isDataReadOnly = true;
+            this.personData1.Location = new System.Drawing.Point(2, 32);
+            this.personData1.Name = "personData1";
+            this.personData1.Size = new System.Drawing.Size(301, 135);
+            this.personData1.TabIndex = 0;
             // 
             // ClubTabPage
             // 
@@ -206,19 +220,11 @@
             this.RemoveClubButton.UseVisualStyleBackColor = true;
             this.RemoveClubButton.Click += new System.EventHandler(this.RemoveClubButton_Click);
             // 
-            // personData1
-            // 
-            this.personData1.isDataReadOnly = true;
-            this.personData1.Location = new System.Drawing.Point(2, 32);
-            this.personData1.Name = "personData1";
-            this.personData1.Size = new System.Drawing.Size(301, 135);
-            this.personData1.TabIndex = 0;
-            // 
             // clubData1
             // 
-            club1.ClubCode = null;
-            club1.Name = null;
-            this.clubData1.Data = club1;
+            club2.ClubCode = "";
+            club2.Name = "";
+            this.clubData1.Data = club2;
             this.clubData1.isDataReadOnly = true;
             this.clubData1.Location = new System.Drawing.Point(2, 32);
             this.clubData1.Name = "clubData1";

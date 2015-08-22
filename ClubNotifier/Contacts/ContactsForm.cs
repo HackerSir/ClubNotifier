@@ -46,7 +46,7 @@ namespace ClubNotifier.Contacts {
                 newClubForm.getClubData().Data = (Club) ClubListBox.SelectedItem;
 
                 if (newClubForm.ShowDialog() == DialogResult.OK) {
-                    ClubListBox.Items[ClubListBox.SelectedIndex] = newClubForm.getClubData().Data;
+                    ClubListBox.Items[ClubListBox.SelectedIndex] = this.clubData1.Data = newClubForm.getClubData().Data;
                 }
             }
         }
@@ -61,9 +61,30 @@ namespace ClubNotifier.Contacts {
 
         private void tabControl1_Deselecting(object sender, TabControlCancelEventArgs e) {
             //http://stackoverflow.com/questions/1565504/most-succinct-way-to-convert-listbox-items-to-a-generic-list
+            Contacts.instance.People = PersonListBox.Items.Cast<Person>().ToList();
             Contacts.instance.Clubs = ClubListBox.Items.Cast<Club>().ToList();
 
             Contacts.instance.SaveData();
+        }
+
+        private void AddPersonButton_Click(object sender, EventArgs e) {
+            var newPersonDataForm = new PersonDataForm();
+
+            if (newPersonDataForm.ShowDialog() == DialogResult.OK) {
+                PersonListBox.Items.Add(newPersonDataForm.getPersonData().Person);
+            }
+        }
+
+        private void EditPersonButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e) {
+
+        }
+
+        private void PersonListBox_SelectedIndexChanged(object sender, EventArgs e) {
+
         }
 
     }

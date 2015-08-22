@@ -16,34 +16,33 @@ namespace ClubNotifier.Contacts {
 
         public Boolean isDataReadOnly {
             get {
-                return textBox1.ReadOnly;
+                return ClubNameTextBox.ReadOnly;
             }
             set {
-                textBox1.ReadOnly = textBox2.ReadOnly = value;
+                ClubNameTextBox.ReadOnly = ClubCodeTextBox.ReadOnly = value;
             }
         }
 
-        private Club data = new Club();
+        private Club data = null;
         public Club Data {
             get {
+                if (data == null) {
+                    data = new Club()
+                    {
+                        ClubCode = ClubCodeTextBox.Text,
+                        Name = ClubNameTextBox.Text,
+                    };
+                }
+                else {
+                    data.ClubCode = ClubCodeTextBox.Text;
+                    data.Name = ClubNameTextBox.Text;
+                }
                 return data;
             }
             set {
                 data = value;
-                textBox2.Text = (data == null) ? "" : data.ClubCode;
-                textBox1.Text = (data == null) ? "" : data.Name;
-            }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e) {
-            if (data != null) {
-                data.ClubCode = textBox2.Text;
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e) {
-            if (data != null) {
-                data.Name = textBox1.Text;
+                ClubCodeTextBox.Text = (data == null) ? "" : data.ClubCode;
+                ClubNameTextBox.Text = (data == null) ? "" : data.Name;
             }
         }
     }

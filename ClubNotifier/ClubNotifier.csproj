@@ -75,6 +75,7 @@
     <Compile Include="Contacts\ContactsForm.Designer.cs">
       <DependentUpon>ContactsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contacts\EmailConverter.cs" />
     <Compile Include="Contacts\Person.cs" />
     <Compile Include="Contacts\PersonData.cs">
       <SubType>UserControl</SubType>
