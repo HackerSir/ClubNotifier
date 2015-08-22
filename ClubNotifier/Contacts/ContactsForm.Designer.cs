@@ -23,15 +23,16 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            ClubNotifier.Contacts.Club club2 = new ClubNotifier.Contacts.Club();
+            ClubNotifier.Contacts.Person person1 = new ClubNotifier.Contacts.Person();
+            ClubNotifier.Contacts.Club club1 = new ClubNotifier.Contacts.Club();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PersonTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.PersonListBox = new System.Windows.Forms.ListBox();
+            this.personData1 = new ClubNotifier.Contacts.PersonData();
             this.AddPersonButton = new System.Windows.Forms.Button();
             this.EditPersonButton = new System.Windows.Forms.Button();
-            this.RemoveButton = new System.Windows.Forms.Button();
-            this.personData1 = new ClubNotifier.Contacts.PersonData();
+            this.RemovePersonButton = new System.Windows.Forms.Button();
             this.ClubTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.ClubListBox = new System.Windows.Forms.ListBox();
@@ -87,10 +88,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.personData1);
             this.splitContainer1.Panel2.Controls.Add(this.AddPersonButton);
             this.splitContainer1.Panel2.Controls.Add(this.EditPersonButton);
-            this.splitContainer1.Panel2.Controls.Add(this.RemoveButton);
-            this.splitContainer1.Panel2.Controls.Add(this.personData1);
+            this.splitContainer1.Panel2.Controls.Add(this.RemovePersonButton);
             this.splitContainer1.Size = new System.Drawing.Size(468, 346);
             this.splitContainer1.SplitterDistance = 156;
             this.splitContainer1.TabIndex = 0;
@@ -105,6 +106,19 @@
             this.PersonListBox.Size = new System.Drawing.Size(156, 346);
             this.PersonListBox.TabIndex = 0;
             this.PersonListBox.SelectedIndexChanged += new System.EventHandler(this.PersonListBox_SelectedIndexChanged);
+            // 
+            // personData1
+            // 
+            this.personData1.isDataReadOnly = true;
+            this.personData1.Location = new System.Drawing.Point(2, 32);
+            this.personData1.Name = "personData1";
+            person1.Club = null;
+            person1.eMail = null;
+            person1.Job = "";
+            person1.Name = "";
+            this.personData1.Person = person1;
+            this.personData1.Size = new System.Drawing.Size(301, 135);
+            this.personData1.TabIndex = 4;
             // 
             // AddPersonButton
             // 
@@ -125,26 +139,18 @@
             this.EditPersonButton.TabIndex = 3;
             this.EditPersonButton.Text = "刪除";
             this.EditPersonButton.UseVisualStyleBackColor = true;
-            this.EditPersonButton.Click += new System.EventHandler(this.EditPersonButton_Click);
+            this.EditPersonButton.Click += new System.EventHandler(this.RemovePersonButton_Click);
             // 
-            // RemoveButton
+            // RemovePersonButton
             // 
-            this.RemoveButton.Enabled = false;
-            this.RemoveButton.Location = new System.Drawing.Point(84, 3);
-            this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
-            this.RemoveButton.TabIndex = 2;
-            this.RemoveButton.Text = "修改";
-            this.RemoveButton.UseVisualStyleBackColor = true;
-            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
-            // 
-            // personData1
-            // 
-            this.personData1.isDataReadOnly = true;
-            this.personData1.Location = new System.Drawing.Point(2, 32);
-            this.personData1.Name = "personData1";
-            this.personData1.Size = new System.Drawing.Size(301, 135);
-            this.personData1.TabIndex = 0;
+            this.RemovePersonButton.Enabled = false;
+            this.RemovePersonButton.Location = new System.Drawing.Point(84, 3);
+            this.RemovePersonButton.Name = "RemovePersonButton";
+            this.RemovePersonButton.Size = new System.Drawing.Size(75, 23);
+            this.RemovePersonButton.TabIndex = 2;
+            this.RemovePersonButton.Text = "修改";
+            this.RemovePersonButton.UseVisualStyleBackColor = true;
+            this.RemovePersonButton.Click += new System.EventHandler(this.RemovePersonButton_Click);
             // 
             // ClubTabPage
             // 
@@ -222,9 +228,9 @@
             // 
             // clubData1
             // 
-            club2.ClubCode = "";
-            club2.Name = "";
-            this.clubData1.Data = club2;
+            club1.ClubCode = "";
+            club1.Name = "";
+            this.clubData1.Data = club1;
             this.clubData1.isDataReadOnly = true;
             this.clubData1.Location = new System.Drawing.Point(2, 32);
             this.clubData1.Name = "clubData1";
@@ -239,6 +245,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "ContactsForm";
             this.Text = "ContactsForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ContactsForm_FormClosing);
             this.Load += new System.EventHandler(this.ContactsForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.PersonTabPage.ResumeLayout(false);
@@ -269,7 +276,7 @@
         private System.Windows.Forms.Button AddClubButton;
         private System.Windows.Forms.ListBox PersonListBox;
         private System.Windows.Forms.Button EditPersonButton;
-        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.Button RemovePersonButton;
         private System.Windows.Forms.Button AddPersonButton;
         private PersonData personData1;
 

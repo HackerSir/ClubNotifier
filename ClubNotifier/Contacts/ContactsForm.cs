@@ -60,11 +60,7 @@ namespace ClubNotifier.Contacts {
         }
 
         private void tabControl1_Deselecting(object sender, TabControlCancelEventArgs e) {
-            //http://stackoverflow.com/questions/1565504/most-succinct-way-to-convert-listbox-items-to-a-generic-list
-            Contacts.instance.People = PersonListBox.Items.Cast<Person>().ToList();
-            Contacts.instance.Clubs = ClubListBox.Items.Cast<Club>().ToList();
-
-            Contacts.instance.SaveData();
+            SaveData();
         }
 
         private void AddPersonButton_Click(object sender, EventArgs e) {
@@ -79,13 +75,33 @@ namespace ClubNotifier.Contacts {
 
         }
 
-        private void RemoveButton_Click(object sender, EventArgs e) {
-
+        private void RemovePersonButton_Click(object sender, EventArgs e) {
+            if (PersonListBox.SelectedIndex != -1) {
+                if (MessageBox.Show(String.Format("你確定要刪除這個聯絡人 '{0}' 嗎？", PersonListBox.SelectedItem), "確認", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                    PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndex);
+                }
+            }
         }
 
         private void PersonListBox_SelectedIndexChanged(object sender, EventArgs e) {
-
+            if (PersonListBox.SelectedIndex != -1) {
+                EditPersonButton.Enabled = RemovePersonButton.Enabled = true;
+            }
+            else {
+                EditPersonButton.Enabled = RemovePersonButton.Enabled = false;
+            }
         }
 
+        private void ContactsForm_FormClosing(object sender, FormClosingEventArgs e) {
+            SaveData();
+        }
+
+        private void SaveData() {
+            //http://stackoverflow.com/questions/1565504/most-succinct-way-to-convert-listbox-items-to-a-generic-list
+            Contacts.instance.People = PersonListBox.Items.Cast<Person>().ToList();
+            Contacts.instance.Clubs = ClubListBox.Items.Cast<Club>().ToList();
+
+            Contacts.instance.SaveData();
+        }
     }
 }

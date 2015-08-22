@@ -50,8 +50,14 @@ namespace ClubNotifier.Contacts {
                     };
                 }
                 else {
+                    MailAddress email = null;
+                    try {
+                        email = new MailAddress(EmailTextBox.Text);
+                    }
+                    catch (Exception e) { }
+
                     data.Name = NameTextBox.Text;
-                    data.eMail = new MailAddress(EmailTextBox.Text);
+                    data.eMail = email;
                     data.Job = (JobsComboBox.SelectedItem == null) ? "" : (String)JobsComboBox.SelectedItem;
                     data.Club = (Club)ClubsComboBox.SelectedItem;
                 }
@@ -60,7 +66,7 @@ namespace ClubNotifier.Contacts {
             set {
                 data = value;
                 NameTextBox.Text = (data == null) ? "" : data.Name;
-                EmailTextBox.Text = (data == null) ? "" : data.eMail.Address;
+                EmailTextBox.Text = (data != null && data.eMail != null) ? data.eMail.Address : "";
                 JobsComboBox.SelectedItem = (data == null) ? null : data.Job;
                 ClubsComboBox.SelectedItem = (data == null) ? null : data.Club;
             }
