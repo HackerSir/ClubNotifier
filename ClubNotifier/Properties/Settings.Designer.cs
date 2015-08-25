@@ -154,5 +154,17 @@ namespace ClubNotifier.Properties {
                 this["JSON_Clubs"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[]")]
+        public string JSON_Jobs {
+            get {
+                return ((string)(this["JSON_Jobs"]));
+            }
+            set {
+                this["JSON_Jobs"] = value;
+            }
+        }
     }
 }

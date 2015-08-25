@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubNotifier.Helper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace ClubNotifier.Contacts {
         private void ContactsForm_Load(object sender, EventArgs e) {
             PersonListBox.Items.AddRange(Contacts.instance.People.ToArray());
             ClubListBox.Items.AddRange(Contacts.instance.Clubs.ToArray());
+            JobListBox.Items.AddRange(Contacts.instance.Jobs.ToArray());
         }
 
         private void ClubListBox_SelectedIndexChanged(object sender, EventArgs e) {
@@ -111,8 +113,51 @@ namespace ClubNotifier.Contacts {
             //http://stackoverflow.com/questions/1565504/most-succinct-way-to-convert-listbox-items-to-a-generic-list
             Contacts.instance.People = PersonListBox.Items.Cast<Person>().ToList();
             Contacts.instance.Clubs = ClubListBox.Items.Cast<Club>().ToList();
+            Contacts.instance.Jobs = JobListBox.Items.Cast<String>().ToList();
 
             Contacts.instance.SaveData();
+        }
+
+        private void AddJobButton_Click(object sender, EventArgs e) {
+            var textForm = new TextBoxDialog();
+            if (textForm.ShowDialog() == DialogResult.OK) {
+                String JobName = textForm.DataTextBox.Text;
+                if (JobName != "") {
+                    //TODO: 重複檢查
+                    JobListBox.Items.Add(JobName);
+                }
+            }
+        }
+
+        private void EditJobButton_Click(object sender, EventArgs e) {
+            if (JobListBox.SelectedIndex != -1) {
+                var textForm = new TextBoxDialog();
+                textForm.DataTextBox.Text = (String)JobListBox.SelectedItem;
+
+                if (textForm.ShowDialog() == DialogResult.OK) {
+                    String JobName = textForm.DataTextBox.Text;
+                    if (JobName != "") {
+                        JobListBox.Items[JobListBox.SelectedIndex] = JobName;
+                    }
+                }
+            }
+        }
+
+        private void RemoveJobButton_Click(object sender, EventArgs e) {
+            if (JobListBox.SelectedIndex != -1) {
+                if (MessageBox.Show(String.Format("你確定要刪除這個職位 '{0}' 嗎？", JobListBox.SelectedItem), "確認", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                    JobListBox.Items.RemoveAt(JobListBox.SelectedIndex);
+                }
+            }
+        }
+
+        private void JobListBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if (JobListBox.SelectedIndex != -1) {
+                EditJobButton.Enabled = RemoveJobButton.Enabled = true;
+            }
+            else {
+                EditJobButton.Enabled = RemoveJobButton.Enabled = false;
+            }
         }
     }
 }

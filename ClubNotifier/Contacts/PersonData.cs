@@ -15,7 +15,9 @@ namespace ClubNotifier.Contacts {
         public PersonData() {
             InitializeComponent();
 
+            JobsComboBox.Items.Add("");
             JobsComboBox.Items.AddRange(Contacts.instance.Jobs.ToArray());
+            ClubsComboBox.Items.Add("");
             ClubsComboBox.Items.AddRange(Contacts.instance.Clubs.ToArray());
         }
 

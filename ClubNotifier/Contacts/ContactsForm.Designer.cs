@@ -45,7 +45,7 @@
             this.JobListBox = new System.Windows.Forms.ListBox();
             this.AddJobButton = new System.Windows.Forms.Button();
             this.EditJobButton = new System.Windows.Forms.Button();
-            this.RemoveButton = new System.Windows.Forms.Button();
+            this.RemoveJobButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.PersonTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -274,7 +274,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.AddJobButton);
             this.splitContainer3.Panel2.Controls.Add(this.EditJobButton);
-            this.splitContainer3.Panel2.Controls.Add(this.RemoveButton);
+            this.splitContainer3.Panel2.Controls.Add(this.RemoveJobButton);
             this.splitContainer3.Size = new System.Drawing.Size(468, 346);
             this.splitContainer3.SplitterDistance = 377;
             this.splitContainer3.TabIndex = 0;
@@ -288,6 +288,7 @@
             this.JobListBox.Name = "JobListBox";
             this.JobListBox.Size = new System.Drawing.Size(377, 346);
             this.JobListBox.TabIndex = 0;
+            this.JobListBox.SelectedIndexChanged += new System.EventHandler(this.JobListBox_SelectedIndexChanged);
             // 
             // AddJobButton
             // 
@@ -297,24 +298,29 @@
             this.AddJobButton.TabIndex = 0;
             this.AddJobButton.Text = "新增";
             this.AddJobButton.UseVisualStyleBackColor = true;
+            this.AddJobButton.Click += new System.EventHandler(this.AddJobButton_Click);
             // 
             // EditJobButton
             // 
+            this.EditJobButton.Enabled = false;
             this.EditJobButton.Location = new System.Drawing.Point(3, 32);
             this.EditJobButton.Name = "EditJobButton";
             this.EditJobButton.Size = new System.Drawing.Size(75, 23);
             this.EditJobButton.TabIndex = 1;
             this.EditJobButton.Text = "編輯";
             this.EditJobButton.UseVisualStyleBackColor = true;
+            this.EditJobButton.Click += new System.EventHandler(this.EditJobButton_Click);
             // 
-            // RemoveButton
+            // RemoveJobButton
             // 
-            this.RemoveButton.Location = new System.Drawing.Point(3, 61);
-            this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
-            this.RemoveButton.TabIndex = 2;
-            this.RemoveButton.Text = "刪除";
-            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveJobButton.Enabled = false;
+            this.RemoveJobButton.Location = new System.Drawing.Point(3, 61);
+            this.RemoveJobButton.Name = "RemoveJobButton";
+            this.RemoveJobButton.Size = new System.Drawing.Size(75, 23);
+            this.RemoveJobButton.TabIndex = 2;
+            this.RemoveJobButton.Text = "刪除";
+            this.RemoveJobButton.UseVisualStyleBackColor = true;
+            this.RemoveJobButton.Click += new System.EventHandler(this.RemoveJobButton_Click);
             // 
             // ContactsForm
             // 
@@ -367,7 +373,7 @@
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.ListBox JobListBox;
         private System.Windows.Forms.Button AddJobButton;
-        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.Button RemoveJobButton;
         private System.Windows.Forms.Button EditJobButton;
 
     }

@@ -15,14 +15,13 @@ namespace ClubNotifier.Contacts {
 
         public List<Club> Clubs;
 
-        public List<String> Jobs = new List<String>();
+        public List<String> Jobs;
 
         private Contacts() {
             try {
                 People = JsonConvert.DeserializeObject<List<Person>>(Settings.Default.JSON_People);
                 Clubs = JsonConvert.DeserializeObject<List<Club>>(Settings.Default.JSON_Clubs);
-
-                updateJobList();
+                Jobs = JsonConvert.DeserializeObject<List<String>>(Settings.Default.JSON_Jobs);
             }
             catch (Exception e) {
                 Console.WriteLine(e.Message);
@@ -34,21 +33,9 @@ namespace ClubNotifier.Contacts {
         public void SaveData() {
             Settings.Default.JSON_People = JsonConvert.SerializeObject(People);
             Settings.Default.JSON_Clubs = JsonConvert.SerializeObject(Clubs);
+            Settings.Default.JSON_Jobs = JsonConvert.SerializeObject(Jobs);
 
             Settings.Default.Save();
-
-            updateJobList();
-        }
-
-        private void updateJobList() {
-            HashSet<String> JobSet = new HashSet<string>();
-            foreach (var person in People) {
-                if (person.Job != null) {
-                    JobSet.Add(person.Job);
-                }
-            }
-            Jobs.Clear();
-            Jobs.AddRange(JobSet.ToArray());
         }
     }
 }
