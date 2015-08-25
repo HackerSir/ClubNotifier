@@ -16,5 +16,13 @@ namespace ClubNotifier.Contacts  {
         public override string ToString() {
             return String.Format("({0} {1})", ClubCode, Name);
         }
+
+        public override bool Equals(Object obj) {
+            Club clubObj = obj as Club;
+            if (clubObj == null)
+                return false;
+            else
+                return this.ClubCode == clubObj.ClubCode && this.Name == clubObj.Name;
+        }
     }
 }

@@ -72,7 +72,14 @@ namespace ClubNotifier.Contacts {
         }
 
         private void EditPersonButton_Click(object sender, EventArgs e) {
+            if (PersonListBox.SelectedIndex != -1) {
+                var newPersonForm = new PersonDataForm();
+                newPersonForm.getPersonData().Person = (Person)PersonListBox.SelectedItem;
 
+                if (newPersonForm.ShowDialog() == DialogResult.OK) {
+                    PersonListBox.Items[PersonListBox.SelectedIndex] = this.personData1.Person = newPersonForm.getPersonData().Person;
+                }
+            }
         }
 
         private void RemovePersonButton_Click(object sender, EventArgs e) {
@@ -86,9 +93,13 @@ namespace ClubNotifier.Contacts {
         private void PersonListBox_SelectedIndexChanged(object sender, EventArgs e) {
             if (PersonListBox.SelectedIndex != -1) {
                 EditPersonButton.Enabled = RemovePersonButton.Enabled = true;
+
+                this.personData1.Person = (Person)PersonListBox.SelectedItem;
             }
             else {
                 EditPersonButton.Enabled = RemovePersonButton.Enabled = false;
+
+                this.personData1.Person = null;
             }
         }
 

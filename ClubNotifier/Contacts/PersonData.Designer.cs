@@ -129,7 +129,6 @@
             this.Controls.Add(this.ClubsComboBox);
             this.Name = "PersonData";
             this.Size = new System.Drawing.Size(278, 135);
-            this.Load += new System.EventHandler(this.PersonData_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

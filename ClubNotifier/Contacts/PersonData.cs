@@ -14,9 +14,7 @@ namespace ClubNotifier.Contacts {
 
         public PersonData() {
             InitializeComponent();
-        }
 
-        private void PersonData_Load(object sender, EventArgs e) {
             JobsComboBox.Items.AddRange(Contacts.instance.Jobs.ToArray());
             ClubsComboBox.Items.AddRange(Contacts.instance.Clubs.ToArray());
         }
@@ -67,8 +65,20 @@ namespace ClubNotifier.Contacts {
                 data = value;
                 NameTextBox.Text = (data == null) ? "" : data.Name;
                 EmailTextBox.Text = (data != null && data.eMail != null) ? data.eMail.Address : "";
-                JobsComboBox.SelectedItem = (data == null) ? null : data.Job;
-                ClubsComboBox.SelectedItem = (data == null) ? null : data.Club;
+
+                if (data != null ) {
+                    int jobIndex = JobsComboBox.FindString(data.Job);
+                    if (jobIndex != -1) {
+                        JobsComboBox.SelectedIndex = jobIndex;
+                    }
+                }
+
+                if (data != null && data.Club != null ) {
+                    int clubIndex = ClubsComboBox.FindString(data.Club.ToString());
+                    if (clubIndex != -1) {
+                        ClubsComboBox.SelectedIndex = clubIndex;
+                    }
+                }
             }
         }
     }

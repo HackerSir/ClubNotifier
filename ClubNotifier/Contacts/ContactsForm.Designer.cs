@@ -150,7 +150,7 @@
             this.RemovePersonButton.TabIndex = 2;
             this.RemovePersonButton.Text = "修改";
             this.RemovePersonButton.UseVisualStyleBackColor = true;
-            this.RemovePersonButton.Click += new System.EventHandler(this.RemovePersonButton_Click);
+            this.RemovePersonButton.Click += new System.EventHandler(this.EditPersonButton_Click);
             // 
             // ClubTabPage
             // 
