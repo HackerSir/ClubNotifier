@@ -26,7 +26,8 @@ namespace ClubNotifier.Contacts  {
         }
 
         public override int GetHashCode() {
-            return ClubCode.GetHashCode() ^ Name.GetHashCode();
+            return ((ClubCode == null) ? String.Empty.GetHashCode() : ClubCode.GetHashCode()) ^
+                   ((Name == null) ? String.Empty.GetHashCode() : Name.GetHashCode());
         }
     }
 }
