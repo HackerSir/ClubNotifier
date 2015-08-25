@@ -24,5 +24,9 @@ namespace ClubNotifier.Contacts  {
             else
                 return this.ClubCode == clubObj.ClubCode && this.Name == clubObj.Name;
         }
+
+        public override int GetHashCode() {
+            return ClubCode.GetHashCode() ^ Name.GetHashCode();
+        }
     }
 }
