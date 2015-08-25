@@ -40,6 +40,12 @@
             this.EditClubButton = new System.Windows.Forms.Button();
             this.RemoveClubButton = new System.Windows.Forms.Button();
             this.clubData1 = new ClubNotifier.Contacts.ClubData();
+            this.JobTabPage = new System.Windows.Forms.TabPage();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.JobListBox = new System.Windows.Forms.ListBox();
+            this.AddJobButton = new System.Windows.Forms.Button();
+            this.EditJobButton = new System.Windows.Forms.Button();
+            this.RemoveButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.PersonTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -51,12 +57,18 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.JobTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.PersonTabPage);
             this.tabControl1.Controls.Add(this.ClubTabPage);
+            this.tabControl1.Controls.Add(this.JobTabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -237,6 +249,73 @@
             this.clubData1.Size = new System.Drawing.Size(300, 69);
             this.clubData1.TabIndex = 0;
             // 
+            // JobTabPage
+            // 
+            this.JobTabPage.Controls.Add(this.splitContainer3);
+            this.JobTabPage.Location = new System.Drawing.Point(4, 22);
+            this.JobTabPage.Name = "JobTabPage";
+            this.JobTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.JobTabPage.Size = new System.Drawing.Size(474, 352);
+            this.JobTabPage.TabIndex = 2;
+            this.JobTabPage.Text = "職位";
+            this.JobTabPage.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.JobListBox);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.AddJobButton);
+            this.splitContainer3.Panel2.Controls.Add(this.EditJobButton);
+            this.splitContainer3.Panel2.Controls.Add(this.RemoveButton);
+            this.splitContainer3.Size = new System.Drawing.Size(468, 346);
+            this.splitContainer3.SplitterDistance = 377;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // JobListBox
+            // 
+            this.JobListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.JobListBox.FormattingEnabled = true;
+            this.JobListBox.ItemHeight = 12;
+            this.JobListBox.Location = new System.Drawing.Point(0, 0);
+            this.JobListBox.Name = "JobListBox";
+            this.JobListBox.Size = new System.Drawing.Size(377, 346);
+            this.JobListBox.TabIndex = 0;
+            // 
+            // AddJobButton
+            // 
+            this.AddJobButton.Location = new System.Drawing.Point(3, 3);
+            this.AddJobButton.Name = "AddJobButton";
+            this.AddJobButton.Size = new System.Drawing.Size(75, 23);
+            this.AddJobButton.TabIndex = 0;
+            this.AddJobButton.Text = "新增";
+            this.AddJobButton.UseVisualStyleBackColor = true;
+            // 
+            // EditJobButton
+            // 
+            this.EditJobButton.Location = new System.Drawing.Point(3, 32);
+            this.EditJobButton.Name = "EditJobButton";
+            this.EditJobButton.Size = new System.Drawing.Size(75, 23);
+            this.EditJobButton.TabIndex = 1;
+            this.EditJobButton.Text = "編輯";
+            this.EditJobButton.UseVisualStyleBackColor = true;
+            // 
+            // RemoveButton
+            // 
+            this.RemoveButton.Location = new System.Drawing.Point(3, 61);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
+            this.RemoveButton.TabIndex = 2;
+            this.RemoveButton.Text = "刪除";
+            this.RemoveButton.UseVisualStyleBackColor = true;
+            // 
             // ContactsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -258,6 +337,11 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.JobTabPage.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -279,6 +363,12 @@
         private System.Windows.Forms.Button RemovePersonButton;
         private System.Windows.Forms.Button AddPersonButton;
         private PersonData personData1;
+        private System.Windows.Forms.TabPage JobTabPage;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.ListBox JobListBox;
+        private System.Windows.Forms.Button AddJobButton;
+        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.Button EditJobButton;
 
     }
 }
