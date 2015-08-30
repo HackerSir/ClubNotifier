@@ -16,9 +16,9 @@ namespace ClubNotifier.Contacts {
         }
 
         private void ContactsForm_Load(object sender, EventArgs e) {
-            PersonListBox.Items.AddRange(Contacts.instance.People.ToArray());
-            ClubListBox.Items.AddRange(Contacts.instance.Clubs.ToArray());
-            JobListBox.Items.AddRange(Contacts.instance.Jobs.ToArray());
+            PersonListBox.Items.AddRange(ContactsData.instance.People.ToArray());
+            ClubListBox.Items.AddRange(ContactsData.instance.Clubs.ToArray());
+            JobListBox.Items.AddRange(ContactsData.instance.Jobs.ToArray());
         }
 
         private void ClubListBox_SelectedIndexChanged(object sender, EventArgs e) {
@@ -111,11 +111,11 @@ namespace ClubNotifier.Contacts {
 
         private void SaveData() {
             //http://stackoverflow.com/questions/1565504/most-succinct-way-to-convert-listbox-items-to-a-generic-list
-            Contacts.instance.People = PersonListBox.Items.Cast<Person>().ToList();
-            Contacts.instance.Clubs = ClubListBox.Items.Cast<Club>().ToList();
-            Contacts.instance.Jobs = JobListBox.Items.Cast<String>().ToList();
+            ContactsData.instance.People = PersonListBox.Items.Cast<Person>().ToList();
+            ContactsData.instance.Clubs = ClubListBox.Items.Cast<Club>().ToList();
+            ContactsData.instance.Jobs = JobListBox.Items.Cast<String>().ToList();
 
-            Contacts.instance.SaveData();
+            ContactsData.instance.SaveData();
         }
 
         private void AddJobButton_Click(object sender, EventArgs e) {

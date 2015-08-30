@@ -16,9 +16,9 @@ namespace ClubNotifier.Contacts {
             InitializeComponent();
 
             JobsComboBox.Items.Add("");
-            JobsComboBox.Items.AddRange(Contacts.instance.Jobs.ToArray());
+            JobsComboBox.Items.AddRange(ContactsData.instance.Jobs.ToArray());
             ClubsComboBox.Items.Add("");
-            ClubsComboBox.Items.AddRange(Contacts.instance.Clubs.ToArray());
+            ClubsComboBox.Items.AddRange(ContactsData.instance.Clubs.ToArray());
         }
 
         public Boolean isDataReadOnly {

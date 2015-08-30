@@ -27,5 +27,9 @@ namespace ClubNotifier {
             new ContactsForm().ShowDialog();
         }
 
+        private void mailToButton_Click(object sender, EventArgs e) {
+            new ContactSelectForm().ShowDialog();
+        }
+
     }
 }

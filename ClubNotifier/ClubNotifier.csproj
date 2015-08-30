@@ -55,6 +55,12 @@
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContactSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactSelectForm.Designer.cs">
+      <DependentUpon>ContactSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contacts\Club.cs" />
     <Compile Include="Contacts\ClubData.cs">
       <SubType>UserControl</SubType>
@@ -125,6 +131,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactSelectForm.resx">
+      <DependentUpon>ContactSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contacts\ClubData.resx">
       <DependentUpon>ClubData.cs</DependentUpon>

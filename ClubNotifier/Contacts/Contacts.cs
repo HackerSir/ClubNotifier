@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClubNotifier.Contacts {
-    class Contacts {
-        public static Contacts instance = new Contacts();
+    class ContactsData {
+        public static ContactsData instance = new ContactsData();
 
         public List<Person> People;
 
@@ -17,7 +17,7 @@ namespace ClubNotifier.Contacts {
 
         public List<String> Jobs;
 
-        private Contacts() {
+        private ContactsData() {
             try {
                 People = JsonConvert.DeserializeObject<List<Person>>(Settings.Default.JSON_People);
                 Clubs = JsonConvert.DeserializeObject<List<Club>>(Settings.Default.JSON_Clubs);
