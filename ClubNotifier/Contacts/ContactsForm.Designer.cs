@@ -29,31 +29,31 @@
             this.PersonTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.PersonListBox = new System.Windows.Forms.ListBox();
-            this.personData1 = new ClubNotifier.Contacts.PersonData();
+            this.ImportPeopleButton = new System.Windows.Forms.Button();
+            this.ExportPeopleButton = new System.Windows.Forms.Button();
             this.AddPersonButton = new System.Windows.Forms.Button();
             this.EditPersonButton = new System.Windows.Forms.Button();
             this.RemovePersonButton = new System.Windows.Forms.Button();
             this.ClubTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.ClubListBox = new System.Windows.Forms.ListBox();
+            this.ImportClubButton = new System.Windows.Forms.Button();
+            this.ExportClubButton = new System.Windows.Forms.Button();
             this.AddClubButton = new System.Windows.Forms.Button();
             this.EditClubButton = new System.Windows.Forms.Button();
             this.RemoveClubButton = new System.Windows.Forms.Button();
-            this.clubData1 = new ClubNotifier.Contacts.ClubData();
             this.JobTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.JobListBox = new System.Windows.Forms.ListBox();
+            this.ImportJobButton = new System.Windows.Forms.Button();
+            this.ExportJobButton = new System.Windows.Forms.Button();
             this.AddJobButton = new System.Windows.Forms.Button();
             this.EditJobButton = new System.Windows.Forms.Button();
             this.RemoveJobButton = new System.Windows.Forms.Button();
-            this.ExportPeopleButton = new System.Windows.Forms.Button();
-            this.ImportPeopleButton = new System.Windows.Forms.Button();
-            this.ExportClubButton = new System.Windows.Forms.Button();
-            this.ImportClubButton = new System.Windows.Forms.Button();
-            this.ExportJobButton = new System.Windows.Forms.Button();
-            this.ImportJobButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.personData1 = new ClubNotifier.Contacts.PersonData();
+            this.clubData1 = new ClubNotifier.Contacts.ClubData();
             this.tabControl1.SuspendLayout();
             this.PersonTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -129,18 +129,25 @@
             this.PersonListBox.TabIndex = 0;
             this.PersonListBox.SelectedIndexChanged += new System.EventHandler(this.PersonListBox_SelectedIndexChanged);
             // 
-            // personData1
+            // ImportPeopleButton
             // 
-            this.personData1.isDataReadOnly = true;
-            this.personData1.Location = new System.Drawing.Point(2, 32);
-            this.personData1.Name = "personData1";
-            person1.Club = null;
-            person1.eMail = null;
-            person1.Job = "";
-            person1.Name = "";
-            this.personData1.Person = person1;
-            this.personData1.Size = new System.Drawing.Size(301, 135);
-            this.personData1.TabIndex = 4;
+            this.ImportPeopleButton.Location = new System.Drawing.Point(3, 289);
+            this.ImportPeopleButton.Name = "ImportPeopleButton";
+            this.ImportPeopleButton.Size = new System.Drawing.Size(75, 23);
+            this.ImportPeopleButton.TabIndex = 6;
+            this.ImportPeopleButton.Text = "匯入...";
+            this.ImportPeopleButton.UseVisualStyleBackColor = true;
+            this.ImportPeopleButton.Click += new System.EventHandler(this.ImportPeopleButton_Click);
+            // 
+            // ExportPeopleButton
+            // 
+            this.ExportPeopleButton.Location = new System.Drawing.Point(3, 318);
+            this.ExportPeopleButton.Name = "ExportPeopleButton";
+            this.ExportPeopleButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportPeopleButton.TabIndex = 5;
+            this.ExportPeopleButton.Text = "匯出...";
+            this.ExportPeopleButton.UseVisualStyleBackColor = true;
+            this.ExportPeopleButton.Click += new System.EventHandler(this.ExportPeopleButton_Click);
             // 
             // AddPersonButton
             // 
@@ -218,6 +225,24 @@
             this.ClubListBox.TabIndex = 0;
             this.ClubListBox.SelectedIndexChanged += new System.EventHandler(this.ClubListBox_SelectedIndexChanged);
             // 
+            // ImportClubButton
+            // 
+            this.ImportClubButton.Location = new System.Drawing.Point(5, 289);
+            this.ImportClubButton.Name = "ImportClubButton";
+            this.ImportClubButton.Size = new System.Drawing.Size(75, 23);
+            this.ImportClubButton.TabIndex = 5;
+            this.ImportClubButton.Text = "匯入...";
+            this.ImportClubButton.UseVisualStyleBackColor = true;
+            // 
+            // ExportClubButton
+            // 
+            this.ExportClubButton.Location = new System.Drawing.Point(5, 318);
+            this.ExportClubButton.Name = "ExportClubButton";
+            this.ExportClubButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportClubButton.TabIndex = 4;
+            this.ExportClubButton.Text = "匯出...";
+            this.ExportClubButton.UseVisualStyleBackColor = true;
+            // 
             // AddClubButton
             // 
             this.AddClubButton.Location = new System.Drawing.Point(5, 3);
@@ -249,17 +274,6 @@
             this.RemoveClubButton.Text = "刪除";
             this.RemoveClubButton.UseVisualStyleBackColor = true;
             this.RemoveClubButton.Click += new System.EventHandler(this.RemoveClubButton_Click);
-            // 
-            // clubData1
-            // 
-            club1.ClubCode = "";
-            club1.Name = "";
-            this.clubData1.Data = club1;
-            this.clubData1.isDataReadOnly = true;
-            this.clubData1.Location = new System.Drawing.Point(2, 32);
-            this.clubData1.Name = "clubData1";
-            this.clubData1.Size = new System.Drawing.Size(300, 69);
-            this.clubData1.TabIndex = 0;
             // 
             // JobTabPage
             // 
@@ -304,6 +318,24 @@
             this.JobListBox.TabIndex = 0;
             this.JobListBox.SelectedIndexChanged += new System.EventHandler(this.JobListBox_SelectedIndexChanged);
             // 
+            // ImportJobButton
+            // 
+            this.ImportJobButton.Location = new System.Drawing.Point(3, 289);
+            this.ImportJobButton.Name = "ImportJobButton";
+            this.ImportJobButton.Size = new System.Drawing.Size(75, 23);
+            this.ImportJobButton.TabIndex = 4;
+            this.ImportJobButton.Text = "匯入...";
+            this.ImportJobButton.UseVisualStyleBackColor = true;
+            // 
+            // ExportJobButton
+            // 
+            this.ExportJobButton.Location = new System.Drawing.Point(3, 318);
+            this.ExportJobButton.Name = "ExportJobButton";
+            this.ExportJobButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportJobButton.TabIndex = 3;
+            this.ExportJobButton.Text = "匯出...";
+            this.ExportJobButton.UseVisualStyleBackColor = true;
+            // 
             // AddJobButton
             // 
             this.AddJobButton.Location = new System.Drawing.Point(3, 3);
@@ -336,63 +368,40 @@
             this.RemoveJobButton.UseVisualStyleBackColor = true;
             this.RemoveJobButton.Click += new System.EventHandler(this.RemoveJobButton_Click);
             // 
-            // ExportPeopleButton
-            // 
-            this.ExportPeopleButton.Location = new System.Drawing.Point(3, 318);
-            this.ExportPeopleButton.Name = "ExportPeopleButton";
-            this.ExportPeopleButton.Size = new System.Drawing.Size(75, 23);
-            this.ExportPeopleButton.TabIndex = 5;
-            this.ExportPeopleButton.Text = "匯出...";
-            this.ExportPeopleButton.UseVisualStyleBackColor = true;
-            // 
-            // ImportPeopleButton
-            // 
-            this.ImportPeopleButton.Location = new System.Drawing.Point(3, 289);
-            this.ImportPeopleButton.Name = "ImportPeopleButton";
-            this.ImportPeopleButton.Size = new System.Drawing.Size(75, 23);
-            this.ImportPeopleButton.TabIndex = 6;
-            this.ImportPeopleButton.Text = "匯入...";
-            this.ImportPeopleButton.UseVisualStyleBackColor = true;
-            // 
-            // ExportClubButton
-            // 
-            this.ExportClubButton.Location = new System.Drawing.Point(5, 318);
-            this.ExportClubButton.Name = "ExportClubButton";
-            this.ExportClubButton.Size = new System.Drawing.Size(75, 23);
-            this.ExportClubButton.TabIndex = 4;
-            this.ExportClubButton.Text = "匯出...";
-            this.ExportClubButton.UseVisualStyleBackColor = true;
-            // 
-            // ImportClubButton
-            // 
-            this.ImportClubButton.Location = new System.Drawing.Point(5, 289);
-            this.ImportClubButton.Name = "ImportClubButton";
-            this.ImportClubButton.Size = new System.Drawing.Size(75, 23);
-            this.ImportClubButton.TabIndex = 5;
-            this.ImportClubButton.Text = "匯入...";
-            this.ImportClubButton.UseVisualStyleBackColor = true;
-            // 
-            // ExportJobButton
-            // 
-            this.ExportJobButton.Location = new System.Drawing.Point(3, 318);
-            this.ExportJobButton.Name = "ExportJobButton";
-            this.ExportJobButton.Size = new System.Drawing.Size(75, 23);
-            this.ExportJobButton.TabIndex = 3;
-            this.ExportJobButton.Text = "匯出...";
-            this.ExportJobButton.UseVisualStyleBackColor = true;
-            // 
-            // ImportJobButton
-            // 
-            this.ImportJobButton.Location = new System.Drawing.Point(3, 289);
-            this.ImportJobButton.Name = "ImportJobButton";
-            this.ImportJobButton.Size = new System.Drawing.Size(75, 23);
-            this.ImportJobButton.TabIndex = 4;
-            this.ImportJobButton.Text = "匯入...";
-            this.ImportJobButton.UseVisualStyleBackColor = true;
-            // 
             // openFileDialog1
             // 
+            this.openFileDialog1.DefaultExt = "json";
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "json|*.json";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "json";
+            this.saveFileDialog1.Filter = "json|*.json";
+            // 
+            // personData1
+            // 
+            this.personData1.isDataReadOnly = true;
+            this.personData1.Location = new System.Drawing.Point(2, 32);
+            this.personData1.Name = "personData1";
+            person1.Club = null;
+            person1.eMail = null;
+            person1.Job = "";
+            person1.Name = "";
+            this.personData1.Person = person1;
+            this.personData1.Size = new System.Drawing.Size(301, 135);
+            this.personData1.TabIndex = 4;
+            // 
+            // clubData1
+            // 
+            club1.ClubCode = "";
+            club1.Name = "";
+            this.clubData1.Data = club1;
+            this.clubData1.isDataReadOnly = true;
+            this.clubData1.Location = new System.Drawing.Point(2, 32);
+            this.clubData1.Name = "clubData1";
+            this.clubData1.Size = new System.Drawing.Size(300, 69);
+            this.clubData1.TabIndex = 0;
             // 
             // ContactsForm
             // 

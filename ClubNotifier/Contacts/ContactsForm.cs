@@ -1,9 +1,12 @@
 ﻿using ClubNotifier.Helper;
+using ClubNotifier.Properties;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -159,5 +162,45 @@ namespace ClubNotifier.Contacts {
                 EditJobButton.Enabled = RemoveJobButton.Enabled = false;
             }
         }
+
+        private void ImportPeopleButton_Click(object sender, EventArgs e) {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) {
+                try {
+                    String importData = File.ReadAllText(openFileDialog1.FileName);
+
+                    var importPeople = JsonConvert.DeserializeObject<List<Person>>(importData).ToArray();
+
+                    HashSet<Person> set = new HashSet<Person>(PersonListBox.Items.Cast<Person>().ToList());
+
+                    foreach (var person in importPeople) {
+                        if (!set.Contains(person)) {
+                            PersonListBox.Items.Add(person);
+                        }
+                    }
+
+                    MessageBox.Show("完成匯入", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void ExportPeopleButton_Click(object sender, EventArgs e) {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
+                try {
+                    SaveData();
+
+                    using (var sw = new StreamWriter(saveFileDialog1.FileName)) {
+                        sw.WriteLine(Settings.Default.JSON_People);
+                    }
+                    MessageBox.Show("完成匯出", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+       
     }
 }
