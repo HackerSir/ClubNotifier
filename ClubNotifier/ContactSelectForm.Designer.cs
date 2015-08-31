@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.YesButton = new System.Windows.Forms.Button();
+            this.NoButton = new System.Windows.Forms.Button();
             this.SelectedColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,25 +54,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(561, 312);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // YesButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(498, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.YesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.YesButton.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.YesButton.Location = new System.Drawing.Point(498, 330);
+            this.YesButton.Name = "YesButton";
+            this.YesButton.Size = new System.Drawing.Size(75, 23);
+            this.YesButton.TabIndex = 1;
+            this.YesButton.Text = "確定";
+            this.YesButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // NoButton
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(417, 330);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.NoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.NoButton.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.NoButton.Location = new System.Drawing.Point(417, 330);
+            this.NoButton.Name = "NoButton";
+            this.NoButton.Size = new System.Drawing.Size(75, 23);
+            this.NoButton.TabIndex = 2;
+            this.NoButton.Text = "取消";
+            this.NoButton.UseVisualStyleBackColor = true;
             // 
             // SelectedColumn
             // 
@@ -108,11 +110,13 @@
             // 
             // ContactSelectForm
             // 
+            this.AcceptButton = this.YesButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.NoButton;
             this.ClientSize = new System.Drawing.Size(585, 365);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.YesButton);
+            this.Controls.Add(this.NoButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -128,8 +132,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button YesButton;
+        private System.Windows.Forms.Button NoButton;
         private System.Windows.Forms.DataGridViewCheckBoxColumn SelectedColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmailColumn;
