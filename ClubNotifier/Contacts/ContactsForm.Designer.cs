@@ -46,6 +46,14 @@
             this.AddJobButton = new System.Windows.Forms.Button();
             this.EditJobButton = new System.Windows.Forms.Button();
             this.RemoveJobButton = new System.Windows.Forms.Button();
+            this.ExportPeopleButton = new System.Windows.Forms.Button();
+            this.ImportPeopleButton = new System.Windows.Forms.Button();
+            this.ExportClubButton = new System.Windows.Forms.Button();
+            this.ImportClubButton = new System.Windows.Forms.Button();
+            this.ExportJobButton = new System.Windows.Forms.Button();
+            this.ImportJobButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tabControl1.SuspendLayout();
             this.PersonTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -100,6 +108,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.ImportPeopleButton);
+            this.splitContainer1.Panel2.Controls.Add(this.ExportPeopleButton);
             this.splitContainer1.Panel2.Controls.Add(this.personData1);
             this.splitContainer1.Panel2.Controls.Add(this.AddPersonButton);
             this.splitContainer1.Panel2.Controls.Add(this.EditPersonButton);
@@ -187,6 +197,8 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.ImportClubButton);
+            this.splitContainer2.Panel2.Controls.Add(this.ExportClubButton);
             this.splitContainer2.Panel2.Controls.Add(this.AddClubButton);
             this.splitContainer2.Panel2.Controls.Add(this.EditClubButton);
             this.splitContainer2.Panel2.Controls.Add(this.RemoveClubButton);
@@ -272,6 +284,8 @@
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.ImportJobButton);
+            this.splitContainer3.Panel2.Controls.Add(this.ExportJobButton);
             this.splitContainer3.Panel2.Controls.Add(this.AddJobButton);
             this.splitContainer3.Panel2.Controls.Add(this.EditJobButton);
             this.splitContainer3.Panel2.Controls.Add(this.RemoveJobButton);
@@ -321,6 +335,64 @@
             this.RemoveJobButton.Text = "刪除";
             this.RemoveJobButton.UseVisualStyleBackColor = true;
             this.RemoveJobButton.Click += new System.EventHandler(this.RemoveJobButton_Click);
+            // 
+            // ExportPeopleButton
+            // 
+            this.ExportPeopleButton.Location = new System.Drawing.Point(3, 318);
+            this.ExportPeopleButton.Name = "ExportPeopleButton";
+            this.ExportPeopleButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportPeopleButton.TabIndex = 5;
+            this.ExportPeopleButton.Text = "匯出...";
+            this.ExportPeopleButton.UseVisualStyleBackColor = true;
+            // 
+            // ImportPeopleButton
+            // 
+            this.ImportPeopleButton.Location = new System.Drawing.Point(3, 289);
+            this.ImportPeopleButton.Name = "ImportPeopleButton";
+            this.ImportPeopleButton.Size = new System.Drawing.Size(75, 23);
+            this.ImportPeopleButton.TabIndex = 6;
+            this.ImportPeopleButton.Text = "匯入...";
+            this.ImportPeopleButton.UseVisualStyleBackColor = true;
+            // 
+            // ExportClubButton
+            // 
+            this.ExportClubButton.Location = new System.Drawing.Point(5, 318);
+            this.ExportClubButton.Name = "ExportClubButton";
+            this.ExportClubButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportClubButton.TabIndex = 4;
+            this.ExportClubButton.Text = "匯出...";
+            this.ExportClubButton.UseVisualStyleBackColor = true;
+            // 
+            // ImportClubButton
+            // 
+            this.ImportClubButton.Location = new System.Drawing.Point(5, 289);
+            this.ImportClubButton.Name = "ImportClubButton";
+            this.ImportClubButton.Size = new System.Drawing.Size(75, 23);
+            this.ImportClubButton.TabIndex = 5;
+            this.ImportClubButton.Text = "匯入...";
+            this.ImportClubButton.UseVisualStyleBackColor = true;
+            // 
+            // ExportJobButton
+            // 
+            this.ExportJobButton.Location = new System.Drawing.Point(3, 318);
+            this.ExportJobButton.Name = "ExportJobButton";
+            this.ExportJobButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportJobButton.TabIndex = 3;
+            this.ExportJobButton.Text = "匯出...";
+            this.ExportJobButton.UseVisualStyleBackColor = true;
+            // 
+            // ImportJobButton
+            // 
+            this.ImportJobButton.Location = new System.Drawing.Point(3, 289);
+            this.ImportJobButton.Name = "ImportJobButton";
+            this.ImportJobButton.Size = new System.Drawing.Size(75, 23);
+            this.ImportJobButton.TabIndex = 4;
+            this.ImportJobButton.Text = "匯入...";
+            this.ImportJobButton.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // ContactsForm
             // 
@@ -375,6 +447,14 @@
         private System.Windows.Forms.Button AddJobButton;
         private System.Windows.Forms.Button RemoveJobButton;
         private System.Windows.Forms.Button EditJobButton;
+        private System.Windows.Forms.Button ImportPeopleButton;
+        private System.Windows.Forms.Button ExportPeopleButton;
+        private System.Windows.Forms.Button ImportClubButton;
+        private System.Windows.Forms.Button ExportClubButton;
+        private System.Windows.Forms.Button ImportJobButton;
+        private System.Windows.Forms.Button ExportJobButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 
     }
 }
