@@ -21,5 +21,51 @@ namespace ClubNotifier.Contacts {
         public override string ToString() {
             return Name;
         }
+
+        public override bool Equals(object obj) {
+            var person = obj as Person;
+
+            if (person == null) {
+                return false;
+            }
+
+            if (!Name.Equals(person.Name)) {
+                return false;
+            }
+
+            if (eMail == null) {
+                if (person.eMail != null) {
+                    return false;
+                }
+            }
+            else if (!eMail.Equals(person.eMail)) {
+                return false;
+            }
+
+            if (!Job.Equals(person.Job)) {
+                return false;
+            }
+
+            if (Club == null) {
+                if (person.Club != null) {
+                    return false;
+                }
+            }
+            else if (!Club.Equals(person.Club)) {
+                return false;
+            }
+
+            return true;
+        }
+
+        public override int GetHashCode() {
+            int hash = 13;
+            if (Name != null) hash = (hash * 7) + Name.GetHashCode();
+            if (eMail != null) hash = (hash * 7) + eMail.GetHashCode();
+            if (Job != null) hash = (hash * 7) + Job.GetHashCode();
+            if (Club != null) hash = (hash * 7) + Club.GetHashCode();
+
+            return hash;
+        }
     }
 }
