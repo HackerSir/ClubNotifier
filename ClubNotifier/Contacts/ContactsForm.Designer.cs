@@ -23,14 +23,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            ClubNotifier.Contacts.Person person1 = new ClubNotifier.Contacts.Person();
-            ClubNotifier.Contacts.Club club1 = new ClubNotifier.Contacts.Club();
+            ClubNotifier.Contacts.Person person4 = new ClubNotifier.Contacts.Person();
+            ClubNotifier.Contacts.Club club4 = new ClubNotifier.Contacts.Club();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.PersonTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.PersonListBox = new System.Windows.Forms.ListBox();
             this.ImportPeopleButton = new System.Windows.Forms.Button();
             this.ExportPeopleButton = new System.Windows.Forms.Button();
+            this.personData1 = new ClubNotifier.Contacts.PersonData();
             this.AddPersonButton = new System.Windows.Forms.Button();
             this.EditPersonButton = new System.Windows.Forms.Button();
             this.RemovePersonButton = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.AddClubButton = new System.Windows.Forms.Button();
             this.EditClubButton = new System.Windows.Forms.Button();
             this.RemoveClubButton = new System.Windows.Forms.Button();
+            this.clubData1 = new ClubNotifier.Contacts.ClubData();
             this.JobTabPage = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.JobListBox = new System.Windows.Forms.ListBox();
@@ -52,8 +54,6 @@
             this.RemoveJobButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.personData1 = new ClubNotifier.Contacts.PersonData();
-            this.clubData1 = new ClubNotifier.Contacts.ClubData();
             this.tabControl1.SuspendLayout();
             this.PersonTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -149,6 +149,19 @@
             this.ExportPeopleButton.UseVisualStyleBackColor = true;
             this.ExportPeopleButton.Click += new System.EventHandler(this.ExportPeopleButton_Click);
             // 
+            // personData1
+            // 
+            this.personData1.isDataReadOnly = true;
+            this.personData1.Location = new System.Drawing.Point(2, 32);
+            this.personData1.Name = "personData1";
+            person4.Club = null;
+            person4.eMail = null;
+            person4.Job = "";
+            person4.Name = "";
+            this.personData1.Person = person4;
+            this.personData1.Size = new System.Drawing.Size(301, 135);
+            this.personData1.TabIndex = 4;
+            // 
             // AddPersonButton
             // 
             this.AddPersonButton.Location = new System.Drawing.Point(3, 3);
@@ -233,6 +246,7 @@
             this.ImportClubButton.TabIndex = 5;
             this.ImportClubButton.Text = "匯入...";
             this.ImportClubButton.UseVisualStyleBackColor = true;
+            this.ImportClubButton.Click += new System.EventHandler(this.ImportClubButton_Click);
             // 
             // ExportClubButton
             // 
@@ -242,6 +256,7 @@
             this.ExportClubButton.TabIndex = 4;
             this.ExportClubButton.Text = "匯出...";
             this.ExportClubButton.UseVisualStyleBackColor = true;
+            this.ExportClubButton.Click += new System.EventHandler(this.ExportClubButton_Click);
             // 
             // AddClubButton
             // 
@@ -274,6 +289,17 @@
             this.RemoveClubButton.Text = "刪除";
             this.RemoveClubButton.UseVisualStyleBackColor = true;
             this.RemoveClubButton.Click += new System.EventHandler(this.RemoveClubButton_Click);
+            // 
+            // clubData1
+            // 
+            club4.ClubCode = "";
+            club4.Name = "";
+            this.clubData1.Data = club4;
+            this.clubData1.isDataReadOnly = true;
+            this.clubData1.Location = new System.Drawing.Point(2, 32);
+            this.clubData1.Name = "clubData1";
+            this.clubData1.Size = new System.Drawing.Size(300, 69);
+            this.clubData1.TabIndex = 0;
             // 
             // JobTabPage
             // 
@@ -326,6 +352,7 @@
             this.ImportJobButton.TabIndex = 4;
             this.ImportJobButton.Text = "匯入...";
             this.ImportJobButton.UseVisualStyleBackColor = true;
+            this.ImportJobButton.Click += new System.EventHandler(this.ImportJobButton_Click);
             // 
             // ExportJobButton
             // 
@@ -335,6 +362,7 @@
             this.ExportJobButton.TabIndex = 3;
             this.ExportJobButton.Text = "匯出...";
             this.ExportJobButton.UseVisualStyleBackColor = true;
+            this.ExportJobButton.Click += new System.EventHandler(this.ExportJobButton_Click);
             // 
             // AddJobButton
             // 
@@ -378,30 +406,6 @@
             // 
             this.saveFileDialog1.DefaultExt = "json";
             this.saveFileDialog1.Filter = "json|*.json";
-            // 
-            // personData1
-            // 
-            this.personData1.isDataReadOnly = true;
-            this.personData1.Location = new System.Drawing.Point(2, 32);
-            this.personData1.Name = "personData1";
-            person1.Club = null;
-            person1.eMail = null;
-            person1.Job = "";
-            person1.Name = "";
-            this.personData1.Person = person1;
-            this.personData1.Size = new System.Drawing.Size(301, 135);
-            this.personData1.TabIndex = 4;
-            // 
-            // clubData1
-            // 
-            club1.ClubCode = "";
-            club1.Name = "";
-            this.clubData1.Data = club1;
-            this.clubData1.isDataReadOnly = true;
-            this.clubData1.Location = new System.Drawing.Point(2, 32);
-            this.clubData1.Name = "clubData1";
-            this.clubData1.Size = new System.Drawing.Size(300, 69);
-            this.clubData1.TabIndex = 0;
             // 
             // ContactsForm
             // 

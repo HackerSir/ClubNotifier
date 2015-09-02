@@ -169,11 +169,11 @@ namespace ClubNotifier.Contacts {
 
                 var importT = JsonConvert.DeserializeObject<List<T>>(importData).ToArray();
 
-                HashSet<T> set = new HashSet<T>(PersonListBox.Items.Cast<T>().ToList());
+                HashSet<T> set = new HashSet<T>(listbox.Items.Cast<T>().ToList());
 
                 foreach (var item in importT) {
                     if (!set.Contains(item)) {
-                        PersonListBox.Items.Add(item);
+                        listbox.Items.Add(item);
                     }
                 }
 
@@ -206,6 +206,32 @@ namespace ClubNotifier.Contacts {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
                 SaveData();
                 this.ExportData(saveFileDialog1.FileName, Settings.Default.JSON_People);
+            }
+        }
+
+        private void ImportClubButton_Click(object sender, EventArgs e) {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) {
+                this.ImportData<Club>(openFileDialog1.FileName, ClubListBox);
+            }
+        }
+
+        private void ExportClubButton_Click(object sender, EventArgs e) {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
+                SaveData();
+                this.ExportData(saveFileDialog1.FileName, Settings.Default.JSON_Clubs);
+            }
+        }
+
+        private void ImportJobButton_Click(object sender, EventArgs e) {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK) {
+                this.ImportData<String>(openFileDialog1.FileName, JobListBox);
+            }
+        }
+
+        private void ExportJobButton_Click(object sender, EventArgs e) {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
+                SaveData();
+                this.ExportData(saveFileDialog1.FileName, Settings.Default.JSON_Jobs);
             }
         }
        
