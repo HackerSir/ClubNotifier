@@ -163,42 +163,49 @@ namespace ClubNotifier.Contacts {
             }
         }
 
+        private void ImportData<T>(String filename, ListBox listbox) {
+            try {
+                String importData = File.ReadAllText(filename);
+
+                var importT = JsonConvert.DeserializeObject<List<T>>(importData).ToArray();
+
+                HashSet<T> set = new HashSet<T>(PersonListBox.Items.Cast<T>().ToList());
+
+                foreach (var item in importT) {
+                    if (!set.Contains(item)) {
+                        PersonListBox.Items.Add(item);
+                    }
+                }
+
+                MessageBox.Show("完成匯入", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ExportData(String filename, String data) {
+            try {
+                using (var sw = new StreamWriter(filename)) {
+                    sw.WriteLine(data);
+                }
+                MessageBox.Show("完成匯出", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void ImportPeopleButton_Click(object sender, EventArgs e) {
             if (openFileDialog1.ShowDialog() == DialogResult.OK) {
-                try {
-                    String importData = File.ReadAllText(openFileDialog1.FileName);
-
-                    var importPeople = JsonConvert.DeserializeObject<List<Person>>(importData).ToArray();
-
-                    HashSet<Person> set = new HashSet<Person>(PersonListBox.Items.Cast<Person>().ToList());
-
-                    foreach (var person in importPeople) {
-                        if (!set.Contains(person)) {
-                            PersonListBox.Items.Add(person);
-                        }
-                    }
-
-                    MessageBox.Show("完成匯入", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex) {
-                    MessageBox.Show(ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                this.ImportData<Person>(openFileDialog1.FileName, PersonListBox);
             }
         }
 
         private void ExportPeopleButton_Click(object sender, EventArgs e) {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
-                try {
-                    SaveData();
-
-                    using (var sw = new StreamWriter(saveFileDialog1.FileName)) {
-                        sw.WriteLine(Settings.Default.JSON_People);
-                    }
-                    MessageBox.Show("完成匯出", "訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex) {
-                    MessageBox.Show(ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                SaveData();
+                this.ExportData(saveFileDialog1.FileName, Settings.Default.JSON_People);
             }
         }
        
