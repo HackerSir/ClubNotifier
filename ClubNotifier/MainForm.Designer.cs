@@ -24,47 +24,28 @@ namespace ClubNotifier {
         /// 修改這個方法的內容。
         /// </summary>
         private void InitializeComponent() {
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.sendEmailToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ContactToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.SettingsToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AboutToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.mailToTextBox = new System.Windows.Forms.TextBox();
             this.mailToButton = new System.Windows.Forms.Button();
             this.mailCCButton = new System.Windows.Forms.Button();
             this.mailBodyTextBox = new System.Windows.Forms.TextBox();
             this.subjectTextBox = new System.Windows.Forms.TextBox();
             this.subjectLabel = new System.Windows.Forms.Label();
-            this.mailCCTextBox = new System.Windows.Forms.TextBox();
             this.mailBccButton = new System.Windows.Forms.Button();
             this.mailFromTextBox = new System.Windows.Forms.TextBox();
-            this.mailBccTextBox = new System.Windows.Forms.TextBox();
             this.mailFromLabel = new System.Windows.Forms.Label();
             this.attachmentsButton = new System.Windows.Forms.Button();
-            this.attachmentsTextBox = new System.Windows.Forms.TextBox();
-            this.sendEmailToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.statusStrip.SuspendLayout();
+            this.mailToListBox = new System.Windows.Forms.ListBox();
+            this.mailCCListBox = new System.Windows.Forms.ListBox();
+            this.mailBccListBox = new System.Windows.Forms.ListBox();
+            this.attachmentsListBox = new System.Windows.Forms.ListBox();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // statusStrip
-            // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 507);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(527, 22);
-            this.statusStrip.TabIndex = 15;
-            this.statusStrip.Text = "statusStrip1";
-            // 
-            // statusLabel
-            // 
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(31, 17);
-            this.statusLabel.Text = "就緒";
             // 
             // toolStrip
             // 
@@ -80,6 +61,18 @@ namespace ClubNotifier {
             this.toolStrip.Size = new System.Drawing.Size(527, 54);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
+            // 
+            // sendEmailToolStripButton
+            // 
+            this.sendEmailToolStripButton.AutoToolTip = false;
+            this.sendEmailToolStripButton.Image = global::ClubNotifier.Properties.Resources.SendEmailIcon;
+            this.sendEmailToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sendEmailToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.sendEmailToolStripButton.Name = "sendEmailToolStripButton";
+            this.sendEmailToolStripButton.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.sendEmailToolStripButton.Size = new System.Drawing.Size(52, 51);
+            this.sendEmailToolStripButton.Text = "發送";
+            this.sendEmailToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator1
             // 
@@ -124,18 +117,6 @@ namespace ClubNotifier {
             this.AboutToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.AboutToolStripButton.Click += new System.EventHandler(this.AboutToolStripButton_Click);
             // 
-            // mailToTextBox
-            // 
-            this.mailToTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mailToTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.mailToTextBox.Location = new System.Drawing.Point(99, 90);
-            this.mailToTextBox.Multiline = true;
-            this.mailToTextBox.Name = "mailToTextBox";
-            this.mailToTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.mailToTextBox.Size = new System.Drawing.Size(416, 27);
-            this.mailToTextBox.TabIndex = 4;
-            // 
             // mailToButton
             // 
             this.mailToButton.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -150,7 +131,7 @@ namespace ClubNotifier {
             // mailCCButton
             // 
             this.mailCCButton.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.mailCCButton.Location = new System.Drawing.Point(12, 123);
+            this.mailCCButton.Location = new System.Drawing.Point(12, 134);
             this.mailCCButton.Name = "mailCCButton";
             this.mailCCButton.Size = new System.Drawing.Size(81, 27);
             this.mailCCButton.TabIndex = 7;
@@ -163,10 +144,10 @@ namespace ClubNotifier {
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mailBodyTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.mailBodyTextBox.Location = new System.Drawing.Point(12, 255);
+            this.mailBodyTextBox.Location = new System.Drawing.Point(12, 299);
             this.mailBodyTextBox.Multiline = true;
             this.mailBodyTextBox.Name = "mailBodyTextBox";
-            this.mailBodyTextBox.Size = new System.Drawing.Size(503, 249);
+            this.mailBodyTextBox.Size = new System.Drawing.Size(503, 218);
             this.mailBodyTextBox.TabIndex = 14;
             // 
             // subjectTextBox
@@ -174,7 +155,7 @@ namespace ClubNotifier {
             this.subjectTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subjectTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.subjectTextBox.Location = new System.Drawing.Point(99, 222);
+            this.subjectTextBox.Location = new System.Drawing.Point(99, 266);
             this.subjectTextBox.Name = "subjectTextBox";
             this.subjectTextBox.Size = new System.Drawing.Size(416, 27);
             this.subjectTextBox.TabIndex = 12;
@@ -183,28 +164,16 @@ namespace ClubNotifier {
             // 
             this.subjectLabel.AutoSize = true;
             this.subjectLabel.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.subjectLabel.Location = new System.Drawing.Point(22, 225);
+            this.subjectLabel.Location = new System.Drawing.Point(22, 269);
             this.subjectLabel.Name = "subjectLabel";
             this.subjectLabel.Size = new System.Drawing.Size(47, 17);
             this.subjectLabel.TabIndex = 13;
             this.subjectLabel.Text = "主旨：";
             // 
-            // mailCCTextBox
-            // 
-            this.mailCCTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mailCCTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.mailCCTextBox.Location = new System.Drawing.Point(99, 123);
-            this.mailCCTextBox.Multiline = true;
-            this.mailCCTextBox.Name = "mailCCTextBox";
-            this.mailCCTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.mailCCTextBox.Size = new System.Drawing.Size(416, 27);
-            this.mailCCTextBox.TabIndex = 6;
-            // 
             // mailBccButton
             // 
             this.mailBccButton.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.mailBccButton.Location = new System.Drawing.Point(12, 156);
+            this.mailBccButton.Location = new System.Drawing.Point(12, 178);
             this.mailBccButton.Name = "mailBccButton";
             this.mailBccButton.Size = new System.Drawing.Size(81, 27);
             this.mailBccButton.TabIndex = 9;
@@ -222,18 +191,6 @@ namespace ClubNotifier {
             this.mailFromTextBox.Size = new System.Drawing.Size(416, 27);
             this.mailFromTextBox.TabIndex = 3;
             // 
-            // mailBccTextBox
-            // 
-            this.mailBccTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mailBccTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.mailBccTextBox.Location = new System.Drawing.Point(99, 156);
-            this.mailBccTextBox.Multiline = true;
-            this.mailBccTextBox.Name = "mailBccTextBox";
-            this.mailBccTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.mailBccTextBox.Size = new System.Drawing.Size(416, 27);
-            this.mailBccTextBox.TabIndex = 8;
-            // 
             // mailFromLabel
             // 
             this.mailFromLabel.AutoSize = true;
@@ -247,36 +204,64 @@ namespace ClubNotifier {
             // attachmentsButton
             // 
             this.attachmentsButton.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.attachmentsButton.Location = new System.Drawing.Point(12, 189);
+            this.attachmentsButton.Location = new System.Drawing.Point(12, 222);
             this.attachmentsButton.Name = "attachmentsButton";
             this.attachmentsButton.Size = new System.Drawing.Size(81, 27);
             this.attachmentsButton.TabIndex = 11;
             this.attachmentsButton.Text = "夾帶檔案...";
             this.attachmentsButton.UseVisualStyleBackColor = true;
             // 
-            // attachmentsTextBox
+            // mailToListBox
             // 
-            this.attachmentsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.mailToListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.attachmentsTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.attachmentsTextBox.Location = new System.Drawing.Point(99, 189);
-            this.attachmentsTextBox.Multiline = true;
-            this.attachmentsTextBox.Name = "attachmentsTextBox";
-            this.attachmentsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.attachmentsTextBox.Size = new System.Drawing.Size(416, 27);
-            this.attachmentsTextBox.TabIndex = 10;
+            this.mailToListBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.mailToListBox.FormattingEnabled = true;
+            this.mailToListBox.ItemHeight = 17;
+            this.mailToListBox.Location = new System.Drawing.Point(99, 90);
+            this.mailToListBox.Name = "mailToListBox";
+            this.mailToListBox.ScrollAlwaysVisible = true;
+            this.mailToListBox.Size = new System.Drawing.Size(416, 38);
+            this.mailToListBox.TabIndex = 16;
             // 
-            // sendEmailToolStripButton
+            // mailCCListBox
             // 
-            this.sendEmailToolStripButton.AutoToolTip = false;
-            this.sendEmailToolStripButton.Image = global::ClubNotifier.Properties.Resources.SendEmailIcon;
-            this.sendEmailToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.sendEmailToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.sendEmailToolStripButton.Name = "sendEmailToolStripButton";
-            this.sendEmailToolStripButton.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.sendEmailToolStripButton.Size = new System.Drawing.Size(52, 51);
-            this.sendEmailToolStripButton.Text = "發送";
-            this.sendEmailToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.mailCCListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mailCCListBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.mailCCListBox.FormattingEnabled = true;
+            this.mailCCListBox.ItemHeight = 17;
+            this.mailCCListBox.Location = new System.Drawing.Point(99, 134);
+            this.mailCCListBox.Name = "mailCCListBox";
+            this.mailCCListBox.ScrollAlwaysVisible = true;
+            this.mailCCListBox.Size = new System.Drawing.Size(416, 38);
+            this.mailCCListBox.TabIndex = 17;
+            // 
+            // mailBccListBox
+            // 
+            this.mailBccListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mailBccListBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.mailBccListBox.FormattingEnabled = true;
+            this.mailBccListBox.ItemHeight = 17;
+            this.mailBccListBox.Location = new System.Drawing.Point(99, 178);
+            this.mailBccListBox.Name = "mailBccListBox";
+            this.mailBccListBox.ScrollAlwaysVisible = true;
+            this.mailBccListBox.Size = new System.Drawing.Size(416, 38);
+            this.mailBccListBox.TabIndex = 18;
+            // 
+            // attachmentsListBox
+            // 
+            this.attachmentsListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.attachmentsListBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.attachmentsListBox.FormattingEnabled = true;
+            this.attachmentsListBox.ItemHeight = 17;
+            this.attachmentsListBox.Location = new System.Drawing.Point(99, 222);
+            this.attachmentsListBox.Name = "attachmentsListBox";
+            this.attachmentsListBox.ScrollAlwaysVisible = true;
+            this.attachmentsListBox.Size = new System.Drawing.Size(416, 38);
+            this.attachmentsListBox.TabIndex = 19;
             // 
             // MainForm
             // 
@@ -286,23 +271,20 @@ namespace ClubNotifier {
             this.Controls.Add(this.mailFromLabel);
             this.Controls.Add(this.mailFromTextBox);
             this.Controls.Add(this.mailToButton);
-            this.Controls.Add(this.mailToTextBox);
+            this.Controls.Add(this.mailToListBox);
             this.Controls.Add(this.mailCCButton);
-            this.Controls.Add(this.mailCCTextBox);
+            this.Controls.Add(this.mailCCListBox);
             this.Controls.Add(this.mailBccButton);
-            this.Controls.Add(this.mailBccTextBox);
+            this.Controls.Add(this.mailBccListBox);
             this.Controls.Add(this.attachmentsButton);
-            this.Controls.Add(this.attachmentsTextBox);
+            this.Controls.Add(this.attachmentsListBox);
             this.Controls.Add(this.subjectLabel);
             this.Controls.Add(this.subjectTextBox);
             this.Controls.Add(this.mailBodyTextBox);
             this.Controls.Add(this.toolStrip);
-            this.Controls.Add(this.statusStrip);
             this.MinimumSize = new System.Drawing.Size(543, 568);
             this.Name = "MainForm";
             this.Text = "社團通知e-mail發送器";
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -312,28 +294,26 @@ namespace ClubNotifier {
 
         #endregion
 
-        private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton sendEmailToolStripButton;
-        private TextBox mailToTextBox;
         private Button mailToButton;
         private Button mailCCButton;
         private TextBox mailBodyTextBox;
         private TextBox subjectTextBox;
         private Label subjectLabel;
-        private TextBox mailCCTextBox;
         private Button mailBccButton;
         private TextBox mailFromTextBox;
-        private TextBox mailBccTextBox;
         private Label mailFromLabel;
         private Button attachmentsButton;
-        private TextBox attachmentsTextBox;
-        private ToolStripStatusLabel statusLabel;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton ContactToolStripButton;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton SettingsToolStripButton;
         private ToolStripButton AboutToolStripButton;
+        private ListBox mailToListBox;
+        private ListBox mailCCListBox;
+        private ListBox mailBccListBox;
+        private ListBox attachmentsListBox;
     }
 }
 

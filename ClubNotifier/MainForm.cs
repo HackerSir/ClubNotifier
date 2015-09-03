@@ -28,7 +28,11 @@ namespace ClubNotifier {
         }
 
         private void mailToButton_Click(object sender, EventArgs e) {
-            new ContactSelectForm().ShowDialog();
+            var selectForm = new ContactSelectForm();
+
+            if (selectForm.ShowDialog() == DialogResult.Yes) {
+                
+            }
         }
 
     }

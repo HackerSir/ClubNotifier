@@ -24,13 +24,13 @@
         /// </summary>
         private void InitializeComponent() {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.YesButton = new System.Windows.Forms.Button();
-            this.NoButton = new System.Windows.Forms.Button();
             this.SelectedColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClubColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JobColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.YesButton = new System.Windows.Forms.Button();
+            this.NoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,28 +53,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(561, 312);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // YesButton
-            // 
-            this.YesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.YesButton.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.YesButton.Location = new System.Drawing.Point(498, 330);
-            this.YesButton.Name = "YesButton";
-            this.YesButton.Size = new System.Drawing.Size(75, 23);
-            this.YesButton.TabIndex = 1;
-            this.YesButton.Text = "確定";
-            this.YesButton.UseVisualStyleBackColor = true;
-            // 
-            // NoButton
-            // 
-            this.NoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.NoButton.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.NoButton.Location = new System.Drawing.Point(417, 330);
-            this.NoButton.Name = "NoButton";
-            this.NoButton.Size = new System.Drawing.Size(75, 23);
-            this.NoButton.TabIndex = 2;
-            this.NoButton.Text = "取消";
-            this.NoButton.UseVisualStyleBackColor = true;
             // 
             // SelectedColumn
             // 
@@ -107,6 +85,29 @@
             this.JobColumn.HeaderText = "職位";
             this.JobColumn.Name = "JobColumn";
             this.JobColumn.ReadOnly = true;
+            // 
+            // YesButton
+            // 
+            this.YesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.YesButton.DialogResult = System.Windows.Forms.DialogResult.Yes;
+            this.YesButton.Location = new System.Drawing.Point(498, 330);
+            this.YesButton.Name = "YesButton";
+            this.YesButton.Size = new System.Drawing.Size(75, 23);
+            this.YesButton.TabIndex = 1;
+            this.YesButton.Text = "確定";
+            this.YesButton.UseVisualStyleBackColor = true;
+            this.YesButton.Click += new System.EventHandler(this.YesButton_Click);
+            // 
+            // NoButton
+            // 
+            this.NoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.NoButton.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.NoButton.Location = new System.Drawing.Point(417, 330);
+            this.NoButton.Name = "NoButton";
+            this.NoButton.Size = new System.Drawing.Size(75, 23);
+            this.NoButton.TabIndex = 2;
+            this.NoButton.Text = "取消";
+            this.NoButton.UseVisualStyleBackColor = true;
             // 
             // ContactSelectForm
             // 
