@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,10 +29,11 @@ namespace ClubNotifier {
         }
 
         private void mailToButton_Click(object sender, EventArgs e) {
-            var selectForm = new ContactSelectForm();
+            var selectForm = new ContactSelectForm(mailToListBox.Items.Cast<MailAddress>().ToList());
 
             if (selectForm.ShowDialog() == DialogResult.Yes) {
-                
+                mailToListBox.Items.Clear();
+                mailToListBox.Items.AddRange(selectForm.Emails.ToArray());
             }
         }
 
