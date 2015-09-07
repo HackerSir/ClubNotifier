@@ -137,6 +137,7 @@ namespace ClubNotifier {
             this.mailCCButton.TabIndex = 7;
             this.mailCCButton.Text = "副本...";
             this.mailCCButton.UseVisualStyleBackColor = true;
+            this.mailCCButton.Click += new System.EventHandler(this.mailCCButton_Click);
             // 
             // mailBodyTextBox
             // 
@@ -179,6 +180,7 @@ namespace ClubNotifier {
             this.mailBccButton.TabIndex = 9;
             this.mailBccButton.Text = "密件副本...";
             this.mailBccButton.UseVisualStyleBackColor = true;
+            this.mailBccButton.Click += new System.EventHandler(this.mailBccButton_Click);
             // 
             // mailFromTextBox
             // 
@@ -210,6 +212,7 @@ namespace ClubNotifier {
             this.attachmentsButton.TabIndex = 11;
             this.attachmentsButton.Text = "夾帶檔案...";
             this.attachmentsButton.UseVisualStyleBackColor = true;
+            this.attachmentsButton.Click += new System.EventHandler(this.attachmentsButton_Click);
             // 
             // mailToListBox
             // 

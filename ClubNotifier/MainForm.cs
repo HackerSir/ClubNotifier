@@ -28,14 +28,31 @@ namespace ClubNotifier {
             new ContactsForm().ShowDialog();
         }
 
-        private void mailToButton_Click(object sender, EventArgs e) {
-            var selectForm = new ContactSelectForm(mailToListBox.Items.Cast<MailAddress>().ToList());
+        private void openContactSelectForm(ListBox listbox) {
+            var selectForm = new ContactSelectForm(listbox.Items.Cast<MailAddress>().ToList());
 
             if (selectForm.ShowDialog() == DialogResult.Yes) {
-                mailToListBox.Items.Clear();
-                mailToListBox.Items.AddRange(selectForm.Emails.ToArray());
+                listbox.Items.Clear();
+                listbox.Items.AddRange(selectForm.Emails.ToArray());
             }
         }
+
+        private void mailToButton_Click(object sender, EventArgs e) {
+            openContactSelectForm(mailToListBox);
+        }
+
+        private void mailCCButton_Click(object sender, EventArgs e) {
+            openContactSelectForm(mailCCListBox);
+        }
+
+        private void mailBccButton_Click(object sender, EventArgs e) {
+            openContactSelectForm(mailBccListBox);
+        }
+
+        private void attachmentsButton_Click(object sender, EventArgs e) {
+
+        }
+
 
     }
 }
