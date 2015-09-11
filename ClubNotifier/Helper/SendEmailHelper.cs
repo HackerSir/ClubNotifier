@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubNotifier.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,7 +12,15 @@ namespace ClubNotifier.Helper {
     class SendEmailHelper {
 
         public static void SendMailUseSettings(MailMessage mail) {
+            NetworkCredential credentials = new NetworkCredential(Settings.Default.LoginUserName, ProtectedDataHelper.ReadPassword());
 
+            SendEmailHelper.SendMail(
+                mail,
+                Settings.Default.SmtpServer,
+                Convert.ToInt32(Settings.Default.SmtpServerPort),
+                Settings.Default.IsEnableSSL,
+                credentials
+            );
         }
 
         public static void SendMail(MailMessage mail, string smtpServer, int smtpSeverPort, Boolean enableSsl, NetworkCredential credentials) {
@@ -23,7 +32,7 @@ namespace ClubNotifier.Helper {
                 using (var dialog = new WaitDialog(client, mail)) {
                     DialogResult result = dialog.ShowDialog();
                     if (result == DialogResult.OK) {
-                        MessageBox.Show("測試信成功寄出。");
+                        MessageBox.Show("信件成功寄出。");
                     }
                     else if (result == DialogResult.Abort) {
                         throw dialog.Exception;

@@ -24,6 +24,7 @@ namespace ClubNotifier {
         /// 修改這個方法的內容。
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.sendEmailToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,7 +45,11 @@ namespace ClubNotifier {
             this.mailCCListBox = new System.Windows.Forms.ListBox();
             this.mailBccListBox = new System.Windows.Forms.ListBox();
             this.attachmentsListBox = new System.Windows.Forms.ListBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.刪除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip
@@ -73,6 +78,7 @@ namespace ClubNotifier {
             this.sendEmailToolStripButton.Size = new System.Drawing.Size(52, 51);
             this.sendEmailToolStripButton.Text = "發送";
             this.sendEmailToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.sendEmailToolStripButton.Click += new System.EventHandler(this.sendEmailToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -186,12 +192,14 @@ namespace ClubNotifier {
             // 
             this.mailFromTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.mailFromTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ClubNotifier.Properties.Settings.Default, "UesrEmail", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.mailFromTextBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.mailFromTextBox.Location = new System.Drawing.Point(99, 57);
             this.mailFromTextBox.Name = "mailFromTextBox";
             this.mailFromTextBox.ReadOnly = true;
             this.mailFromTextBox.Size = new System.Drawing.Size(416, 27);
             this.mailFromTextBox.TabIndex = 3;
+            this.mailFromTextBox.Text = global::ClubNotifier.Properties.Settings.Default.UesrEmail;
             // 
             // mailFromLabel
             // 
@@ -257,6 +265,7 @@ namespace ClubNotifier {
             // 
             this.attachmentsListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.attachmentsListBox.ContextMenuStrip = this.contextMenuStrip1;
             this.attachmentsListBox.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.attachmentsListBox.FormattingEnabled = true;
             this.attachmentsListBox.ItemHeight = 17;
@@ -265,6 +274,24 @@ namespace ClubNotifier {
             this.attachmentsListBox.ScrollAlwaysVisible = true;
             this.attachmentsListBox.Size = new System.Drawing.Size(416, 38);
             this.attachmentsListBox.TabIndex = 19;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.刪除ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
+            // 
+            // 刪除ToolStripMenuItem
+            // 
+            this.刪除ToolStripMenuItem.Name = "刪除ToolStripMenuItem";
+            this.刪除ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.刪除ToolStripMenuItem.Text = "刪除";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Multiselect = true;
             // 
             // MainForm
             // 
@@ -290,6 +317,7 @@ namespace ClubNotifier {
             this.Text = "社團通知e-mail發送器";
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,6 +345,9 @@ namespace ClubNotifier {
         private ListBox mailCCListBox;
         private ListBox mailBccListBox;
         private ListBox attachmentsListBox;
+        private OpenFileDialog openFileDialog1;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem 刪除ToolStripMenuItem;
     }
 }
 
